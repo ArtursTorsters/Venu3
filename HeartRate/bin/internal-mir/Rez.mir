@@ -1,0 +1,1819 @@
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [id_monkey,9,27,36]; @symbol_type<0> = [ResourceId,9,40,50]; ]
+        var id_monkey as ResourceId;
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 10; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,10,27,39]; @symbol_type<0> = [ResourceId,10,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 13; @symbol_moduledef = [Layouts,13,11,18]; ]
+    module Layouts {
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 13; ]
+        <init> {
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 14; @symbol_functiondef = [MainLayout,14,17,27]; @symbol_param<0> = [dc,14,28,30]; @symbol_param<0>_type<0> = [Graphics,14,34,42]; @symbol_param<0>_type<1> = [Dc,14,43,45]; @symbol_return<0> = [Array,14,50,55]; @symbol_return<1> = [WatchUi,14,56,63]; @symbol_return<2> = [Drawable,14,64,72]; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 15 12 ]
+            [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_stop" ]
+            %rez_cmp_local_text_1193959466.1 = local;
+            symbol [ rez_cmp_local_text_1193959466 %rez_cmp_local_text_1193959466.1 15 16 45 ];
+            symbol [ WatchUi %tmp.3 15 52 59 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 15 60 64 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :color;
+            symbol [ color %tmp.7 15 67 72 const ];
+            symbol [ Graphics %tmp.8 15 74 82 ];
+            %tmp.8 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.9 15 83 94 ];
+            %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+            %tmp.10 = dup %tmp.5;
+            %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+            %tmp.13 = const :locX;
+            symbol [ locX %tmp.13 15 97 101 const ];
+            %tmp.14 = 454;
+            %tmp.15 = 0.5;
+            %tmp.16 = mul %tmp.14 %tmp.15;
+            %tmp.17 = dup %tmp.11;
+            %tmp.18 = aputv %tmp.17 %tmp.13 %tmp.16;
+            %tmp.20 = const :locY;
+            symbol [ locY %tmp.20 15 117 121 const ];
+            %tmp.21 = 5;
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :text;
+            symbol [ text %tmp.25 15 127 131 const ];
+            symbol [ $ %tmp.26 15 133 134 ];
+            %tmp.26 = getm $;
+            symbol [ Rez %tmp.27 15 135 138 ];
+            %tmp.27 = getv %tmp.26 :Rez;
+            symbol [ Strings %tmp.28 15 139 146 ];
+            %tmp.28 = getv %tmp.27 :Strings;
+            symbol [ prompt %tmp.29 15 147 153 ];
+            %tmp.29 = getv %tmp.28 :prompt;
+            %tmp.30 = dup %tmp.23;
+            %tmp.31 = aputv %tmp.30 %tmp.25 %tmp.29;
+            %tmp.33 = const :justification;
+            symbol [ justification %tmp.33 15 156 169 const ];
+            symbol [ Graphics %tmp.34 15 171 179 ];
+            %tmp.34 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.35 15 180 199 ];
+            %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+            %tmp.36 = dup %tmp.31;
+            %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+            %tmp.39 = const :font;
+            symbol [ font %tmp.39 15 202 206 const ];
+            symbol [ Graphics %tmp.40 15 208 216 ];
+            %tmp.40 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.41 15 217 228 ];
+            %tmp.41 = getv %tmp.40 :FONT_MEDIUM;
+            %tmp.42 = dup %tmp.37;
+            %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
+            %tmp.1 = newc %tmp.4 (%tmp.43);
+            lputv %rez_cmp_local_text_1193959466.1 %tmp.1;
+            symbol [ rez_cmp_local_text_1193959466 %rez_cmp_local_text_1193959466.1 15 16 45 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 17 12 ]
+            [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_stop" ]
+            %rez_cmp_local_bitmap_id_monkey.2 = local;
+            symbol [ rez_cmp_local_bitmap_id_monkey %rez_cmp_local_bitmap_id_monkey.2 17 16 46 ];
+            symbol [ WatchUi %tmp.46 17 53 60 ];
+            %tmp.46 = getm $.Toybox.WatchUi;
+            symbol [ Bitmap %tmp.47 17 61 67 ];
+            %tmp.47 = getv function ? %tmp.46 :Bitmap;
+            %tmp.48 = newd 4;
+            %tmp.50 = const :identifier;
+            symbol [ identifier %tmp.50 17 70 80 const ];
+            %tmp.51 = "id_monkey";
+            %tmp.52 = dup %tmp.48;
+            %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+            %tmp.55 = const :rezId;
+            symbol [ rezId %tmp.55 17 96 101 const ];
+            symbol [ $ %tmp.56 17 103 104 ];
+            %tmp.56 = getm $;
+            symbol [ Rez %tmp.57 17 105 108 ];
+            %tmp.57 = getv %tmp.56 :Rez;
+            symbol [ Drawables %tmp.58 17 109 118 ];
+            %tmp.58 = getv %tmp.57 :Drawables;
+            symbol [ id_monkey %tmp.59 17 119 128 ];
+            %tmp.59 = getv %tmp.58 :id_monkey;
+            %tmp.60 = dup %tmp.53;
+            %tmp.61 = aputv %tmp.60 %tmp.55 %tmp.59;
+            %tmp.63 = const :locX;
+            symbol [ locX %tmp.63 17 131 135 const ];
+            symbol [ WatchUi %tmp.64 17 137 144 ];
+            %tmp.64 = getm $.Toybox.WatchUi;
+            symbol [ LAYOUT_HALIGN_CENTER %tmp.65 17 145 165 ];
+            %tmp.65 = getv %tmp.64 :LAYOUT_HALIGN_CENTER;
+            %tmp.66 = dup %tmp.61;
+            %tmp.67 = aputv %tmp.66 %tmp.63 %tmp.65;
+            %tmp.69 = const :locY;
+            symbol [ locY %tmp.69 17 168 172 const ];
+            %tmp.70 = 30;
+            %tmp.71 = dup %tmp.67;
+            %tmp.72 = aputv %tmp.71 %tmp.69 %tmp.70;
+            %tmp.44 = newc %tmp.47 (%tmp.72);
+            lputv %rez_cmp_local_bitmap_id_monkey.2 %tmp.44;
+            symbol [ rez_cmp_local_bitmap_id_monkey %rez_cmp_local_bitmap_id_monkey.2 17 16 46 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 18 12 ]
+            %tmp.73 = lgetv %rez_cmp_local_bitmap_id_monkey.2;
+            symbol [ rez_cmp_local_bitmap_id_monkey %tmp.73 18 12 42 ];
+            symbol [ setLocation %tmp.74 18 43 54 ];
+            %tmp.74 = getv function %tmp.73 :setLocation;
+            %tmp.75 = 454;
+            %tmp.76 = lgetv %rez_cmp_local_bitmap_id_monkey.2;
+            symbol [ rez_cmp_local_bitmap_id_monkey %tmp.76 18 63 93 ];
+            symbol [ width %tmp.77 18 94 99 ];
+            %tmp.77 = getv %tmp.76 :width;
+            %tmp.78 = sub %tmp.75 %tmp.77;
+            %tmp.79 = 0.5;
+            %tmp.80 = mul %tmp.78 %tmp.79;
+            %tmp.81 = lgetv %rez_cmp_local_bitmap_id_monkey.2;
+            symbol [ rez_cmp_local_bitmap_id_monkey %tmp.81 18 109 139 ];
+            symbol [ locY %tmp.82 18 140 144 ];
+            %tmp.82 = getv %tmp.81 :locY;
+            invoke %tmp.73 %tmp.74(%tmp.80, %tmp.82);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 20 12 ]
+            %tmp.83 = newa 2 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.83 20 86 91 ];
+            symbol [ WatchUi %tmp.83 20 92 99 ];
+            symbol [ Drawable %tmp.83 20 100 108 ];
+            %tmp.84 = lgetv %rez_cmp_local_text_1193959466.1;
+            symbol [ rez_cmp_local_text_1193959466 %tmp.84 20 20 49 ];
+            %tmp.85 = dup %tmp.83;
+            %tmp.86 = aputv %tmp.85 0 %tmp.84;
+            %tmp.87 = lgetv %rez_cmp_local_bitmap_id_monkey.2;
+            symbol [ rez_cmp_local_bitmap_id_monkey %tmp.87 20 51 81 ];
+            %tmp.88 = dup %tmp.86;
+            %tmp.89 = aputv %tmp.88 1 %tmp.87;
+            ret %tmp.89;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_14_74_21_8_stop:
+        }
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 24; @symbol_moduledef = [Menus,24,11,16]; ]
+    module Menus {
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 25; @symbol_classdef = [MainMenu,25,14,22]; @symbol_extends<0> = [WatchUi,25,31,38]; @symbol_extends<1> = [Menu,25,39,43]; ]
+        class MainMenu extends WatchUi.Menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 25; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 25; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 26; @symbol_functiondef = [initialize,26,21,31]; ]
+            function initialize() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_26_34_30_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 27 16 ]
+                symbol [ Menu %tmp.2 27 16 20 ];
+                %tmp.2 = getv ? :Menu;
+                symbol [ initialize %tmp.3 27 21 31 ];
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 28 16 ]
+                %tmp.4 = self;
+                symbol [ addItem %tmp.5 28 16 23 ];
+                %tmp.5 = getv function %tmp.4 :addItem;
+                symbol [ WatchUi %tmp.6 28 25 32 ];
+                %tmp.6 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.7 28 33 45 ];
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                symbol [ $ %tmp.8 28 46 47 ];
+                %tmp.8 = getm $;
+                symbol [ Rez %tmp.9 28 48 51 ];
+                %tmp.9 = getv %tmp.8 :Rez;
+                symbol [ Strings %tmp.10 28 52 59 ];
+                %tmp.10 = getv %tmp.9 :Strings;
+                symbol [ menu_label_1 %tmp.11 28 60 72 ];
+                %tmp.11 = getv %tmp.10 :menu_label_1;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                symbol [ String %tmp.13 28 77 83 ];
+                %tmp.15 = const :item_1;
+                symbol [ item_1 %tmp.15 28 87 93 const ];
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 29 16 ]
+                %tmp.16 = self;
+                symbol [ addItem %tmp.17 29 16 23 ];
+                %tmp.17 = getv function %tmp.16 :addItem;
+                symbol [ WatchUi %tmp.18 29 25 32 ];
+                %tmp.18 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.19 29 33 45 ];
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                symbol [ $ %tmp.20 29 46 47 ];
+                %tmp.20 = getm $;
+                symbol [ Rez %tmp.21 29 48 51 ];
+                %tmp.21 = getv %tmp.20 :Rez;
+                symbol [ Strings %tmp.22 29 52 59 ];
+                %tmp.22 = getv %tmp.21 :Strings;
+                symbol [ menu_label_2 %tmp.23 29 60 72 ];
+                %tmp.23 = getv %tmp.22 :menu_label_2;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                symbol [ String %tmp.25 29 77 83 ];
+                %tmp.27 = const :item_2;
+                symbol [ item_2 %tmp.27 29 87 93 const ];
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_bin_gen_006_B4260_00_source_Rez_mcgen_26_34_30_12_stop:
+            }
+        }
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 34; @symbol_moduledef = [Strings,34,11,18]; ]
+    module Strings {
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 34; ]
+        <init> {
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [menu_label_1,35,27,39]; @symbol_type<0> = [ResourceId,35,43,53]; ]
+        var menu_label_1 as ResourceId;
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 36; @position = 27; initialized = true; @symbol_vardef = [menu_label_2,36,27,39]; @symbol_type<0> = [ResourceId,36,43,53]; ]
+        var menu_label_2 as ResourceId;
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 37; @position = 27; initialized = true; @symbol_vardef = [prompt,37,27,33]; @symbol_type<0> = [ResourceId,37,37,47]; ]
+        var prompt as ResourceId;
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 38; @position = 27; initialized = true; @symbol_vardef = [AppName,38,27,34]; @symbol_type<0> = [ResourceId,38,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 41; @symbol_moduledef = [Styles,41,11,17]; ]
+    module Styles {
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 41; ]
+        <init> {
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 42; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,42,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 42; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 43 18 ]
+                symbol [ Graphics %tmp.28 43 34 42 ];
+                %tmp.28 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.29 43 43 62 ];
+                %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.29;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 44 18 ]
+                symbol [ Graphics %tmp.30 44 25 33 ];
+                %tmp.30 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.31 44 34 44 ];
+                %tmp.31 = getv %tmp.30 :FONT_SMALL;
+                putv self :font %tmp.31;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 43; @position = 18; @symbol_constdef = [justification,43,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 44; @position = 18; @symbol_constdef = [font,44,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 47; @symbol_moduledef = [system_size__menu_header,47,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 47; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 48; @position = 18; @symbol_constdef = [width,48,18,23]; @symbol_type<0> = [Number,48,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 49; @position = 18; @symbol_constdef = [height,49,18,24]; @symbol_type<0> = [Number,49,28,34]; ]
+            const height as Number = 105;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 52; @symbol_moduledef = [system_loc__hint_button_left_bottom,52,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 52; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [exclude,53,18,25]; @symbol_type<0> = [Boolean,53,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 56; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,56,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 56; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 57 18 ]
+                symbol [ Graphics %tmp.32 57 34 42 ];
+                %tmp.32 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.33 57 43 62 ];
+                %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.34 57 63 71 ];
+                %tmp.34 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.35 57 72 92 ];
+                %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_VCENTER;
+                %tmp.36 = bitor %tmp.33 %tmp.35;
+                putv self :justification %tmp.36;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 58 18 ]
+                symbol [ Graphics %tmp.37 58 25 33 ];
+                %tmp.37 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.38 58 34 44 ];
+                %tmp.38 = getv %tmp.37 :FONT_SMALL;
+                putv self :font %tmp.38;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 57; @position = 18; @symbol_constdef = [justification,57,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [font,58,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 61; @symbol_moduledef = [prompt_loc__body_no_title,61,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 61; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [x,62,18,19]; @symbol_type<0> = [Number,62,23,29]; ]
+            const x as Number = 45;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 63; @position = 18; @symbol_constdef = [y,63,18,19]; @symbol_type<0> = [Number,63,23,29]; ]
+            const y as Number = 68;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 66; @symbol_moduledef = [system_icon_dark__about,66,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 66; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [filename,67,18,26]; @symbol_type<0> = [String,67,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__about.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 68; @position = 18; @symbol_constdef = [compress,68,18,26]; @symbol_type<0> = [String,68,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 69; @position = 18; @symbol_constdef = [dithering,69,18,27]; @symbol_type<0> = [String,69,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [automaticPalette,70,18,34]; @symbol_type<0> = [String,70,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [packingFormat,71,18,31]; @symbol_type<0> = [String,71,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 74; @symbol_moduledef = [system_icon_light__question,74,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [filename,75,18,26]; @symbol_type<0> = [String,75,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__question.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [compress,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [dithering,77,18,27]; @symbol_type<0> = [String,77,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [automaticPalette,78,18,34]; @symbol_type<0> = [String,78,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [packingFormat,79,18,31]; @symbol_type<0> = [String,79,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 82; @symbol_moduledef = [system_loc__hint_button_left_top,82,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [exclude,83,18,25]; @symbol_type<0> = [Boolean,83,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 86; @symbol_moduledef = [prompt_font__title,86,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 86; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 87 18 ]
+                symbol [ Graphics %tmp.39 87 34 42 ];
+                %tmp.39 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.40 87 43 62 ];
+                %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.41 87 63 71 ];
+                %tmp.41 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.42 87 72 92 ];
+                %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_VCENTER;
+                %tmp.43 = bitor %tmp.40 %tmp.42;
+                putv self :justification %tmp.43;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 88 18 ]
+                symbol [ Graphics %tmp.44 88 25 33 ];
+                %tmp.44 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.45 88 34 44 ];
+                %tmp.45 = getv %tmp.44 :FONT_XTINY;
+                putv self :font %tmp.45;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 87; @position = 18; @symbol_constdef = [justification,87,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [font,88,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 91; @symbol_moduledef = [system_icon_dark__discard,91,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 91; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 92; @position = 18; @symbol_constdef = [filename,92,18,26]; @symbol_type<0> = [String,92,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__discard.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [compress,93,18,26]; @symbol_type<0> = [String,93,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [dithering,94,18,27]; @symbol_type<0> = [String,94,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [automaticPalette,95,18,34]; @symbol_type<0> = [String,95,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [packingFormat,96,18,31]; @symbol_type<0> = [String,96,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 99; @symbol_moduledef = [system_size__menu_item,99,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 99; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [width,100,18,23]; @symbol_type<0> = [Number,100,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [height,101,18,24]; @symbol_type<0> = [Number,101,28,34]; ]
+            const height as Number = 116;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 104; @symbol_moduledef = [system_color_dark__text,104,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 104; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 106 18 ]
+                symbol [ Graphics %tmp.46 106 31 39 ];
+                %tmp.46 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.47 106 40 57 ];
+                %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
+                putv self :background %tmp.47;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [color,105,18,23]; @symbol_type<0> = [Number,105,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [background,106,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 109; @symbol_moduledef = [system_icon_destructive__discard,109,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 109; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [filename,110,18,26]; @symbol_type<0> = [String,110,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__discard.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [dithering,111,18,27]; @symbol_type<0> = [String,111,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 112; @position = 18; @symbol_constdef = [packingFormat,112,18,31]; @symbol_type<0> = [String,112,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 115; @symbol_moduledef = [system_icon_dark__hint_action_menu,115,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 115; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [filename,116,18,26]; @symbol_type<0> = [String,116,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 117; @position = 18; @symbol_constdef = [dithering,117,18,27]; @symbol_type<0> = [String,117,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 118; @position = 18; @symbol_constdef = [packingFormat,118,18,31]; @symbol_type<0> = [String,118,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 121; @symbol_moduledef = [prompt_size__title,121,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 121; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 122; @position = 18; @symbol_constdef = [width,122,18,23]; @symbol_type<0> = [Number,122,27,33]; ]
+            const width as Number = 192;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [height,123,18,24]; @symbol_type<0> = [Number,123,28,34]; ]
+            const height as Number = 81;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 126; @symbol_moduledef = [confirmation_font__body,126,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 126; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 127 18 ]
+                symbol [ Graphics %tmp.48 127 34 42 ];
+                %tmp.48 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.49 127 43 62 ];
+                %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.50 127 63 71 ];
+                %tmp.50 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.51 127 72 92 ];
+                %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_VCENTER;
+                %tmp.52 = bitor %tmp.49 %tmp.51;
+                putv self :justification %tmp.52;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 128 18 ]
+                symbol [ Graphics %tmp.53 128 25 33 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.54 128 34 43 ];
+                %tmp.54 = getv %tmp.53 :FONT_TINY;
+                putv self :font %tmp.54;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 127; @position = 18; @symbol_constdef = [justification,127,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 128; @position = 18; @symbol_constdef = [font,128,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 131; @symbol_moduledef = [system_color_dark__background,131,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 131; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [color,132,18,23]; @symbol_type<0> = [Number,132,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [background,133,18,28]; @symbol_type<0> = [Number,133,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 136; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,136,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [exclude,137,18,25]; @symbol_type<0> = [Boolean,137,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 140; @symbol_moduledef = [system_size__launch_icon,140,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 140; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 141; @position = 18; @symbol_constdef = [scaleX,141,18,24]; @symbol_type<0> = [Number,141,28,34]; ]
+            const scaleX as Number = 70;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [scaleY,142,18,24]; @symbol_type<0> = [Number,142,28,34]; ]
+            const scaleY as Number = 70;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [scaleRelativeTo,143,18,33]; @symbol_type<0> = [String,143,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 146; @symbol_moduledef = [confirmation_input__confirm,146,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [y1,147,18,20]; @symbol_type<0> = [Number,147,24,30]; ]
+            const y1 as Number = 345;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [x1,148,18,20]; @symbol_type<0> = [Number,148,24,30]; ]
+            const x1 as Number = 84;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [y2,149,18,20]; @symbol_type<0> = [Number,149,24,30]; ]
+            const y2 as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 150; @position = 18; @symbol_constdef = [x2,150,18,20]; @symbol_type<0> = [Number,150,24,30]; ]
+            const x2 as Number = 370;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 153; @symbol_moduledef = [prompt_font__body_with_title,153,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 153; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 154 18 ]
+                symbol [ Graphics %tmp.55 154 34 42 ];
+                %tmp.55 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.56 154 43 62 ];
+                %tmp.56 = getv %tmp.55 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.56;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 155 18 ]
+                symbol [ Graphics %tmp.57 155 25 33 ];
+                %tmp.57 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.58 155 34 43 ];
+                %tmp.58 = getv %tmp.57 :FONT_TINY;
+                putv self :font %tmp.58;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [justification,154,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 155; @position = 18; @symbol_constdef = [font,155,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 158; @symbol_moduledef = [confirmation_loc__body,158,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 158; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [x,159,18,19]; @symbol_type<0> = [Number,159,23,29]; ]
+            const x as Number = 93;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 160; @position = 18; @symbol_constdef = [y,160,18,19]; @symbol_type<0> = [Number,160,23,29]; ]
+            const y as Number = 91;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 163; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,163,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [exclude,164,18,25]; @symbol_type<0> = [Boolean,164,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 167; @symbol_moduledef = [prompt_color_dark__background,167,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [color,168,18,23]; @symbol_type<0> = [Number,168,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [background,169,18,28]; @symbol_type<0> = [Number,169,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 172; @symbol_moduledef = [system_icon_destructive__hint_action_menu,172,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [filename,173,18,26]; @symbol_type<0> = [String,173,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__hint_action_menu.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [dithering,174,18,27]; @symbol_type<0> = [String,174,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [packingFormat,175,18,31]; @symbol_type<0> = [String,175,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 178; @symbol_moduledef = [system_loc__hint_action_menu,178,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 178; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [x,179,18,19]; @symbol_type<0> = [Number,179,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [horizontalJustification,180,18,41]; @symbol_type<0> = [String,180,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 181; @position = 18; @symbol_constdef = [y,181,18,19]; @symbol_type<0> = [Number,181,23,29]; ]
+            const y as Number = 370;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 184; @symbol_moduledef = [confirmation_icon__hint_confirm,184,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 184; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 185; @position = 18; @symbol_constdef = [filename,185,18,26]; @symbol_type<0> = [String,185,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [dithering,186,18,27]; @symbol_type<0> = [String,186,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [packingFormat,187,18,31]; @symbol_type<0> = [String,187,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 190; @symbol_moduledef = [system_loc__hint_button_left_middle,190,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 190; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [exclude,191,18,25]; @symbol_type<0> = [Boolean,191,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 194; @symbol_moduledef = [prompt_size__body_no_title,194,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 194; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [width,195,18,23]; @symbol_type<0> = [Number,195,27,33]; ]
+            const width as Number = 363;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [height,196,18,24]; @symbol_type<0> = [Number,196,28,34]; ]
+            const height as Number = 295;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 199; @symbol_moduledef = [system_icon_light__hint_button_left_top,199,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [exclude,200,18,25]; @symbol_type<0> = [Boolean,200,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 203; @symbol_moduledef = [prompt_color_light__background,203,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 203; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [color,204,18,23]; @symbol_type<0> = [Number,204,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [background,205,18,28]; @symbol_type<0> = [Number,205,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 208; @symbol_moduledef = [confirmation_input__delete,208,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 208; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 209 18 ]
+                symbol [ WatchUi %tmp.59 209 27 34 ];
+                %tmp.59 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.60 209 35 44 ];
+                %tmp.60 = getv %tmp.59 :KEY_ENTER;
+                putv self :button %tmp.60;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [button,209,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 212; @symbol_moduledef = [system_icon_dark__hint_button_left_top,212,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 212; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 213; @position = 18; @symbol_constdef = [exclude,213,18,25]; @symbol_type<0> = [Boolean,213,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 216; @symbol_moduledef = [system_input__action_menu,216,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 216; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [y1,217,18,20]; @symbol_type<0> = [Number,217,24,30]; ]
+            const y1 as Number = 370;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [x1,218,18,20]; @symbol_type<0> = [Number,218,24,30]; ]
+            const x1 as Number = 113;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 219; @position = 18; @symbol_constdef = [y2,219,18,20]; @symbol_type<0> = [Number,219,24,30]; ]
+            const y2 as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [x2,220,18,20]; @symbol_type<0> = [Number,220,24,30]; ]
+            const x2 as Number = 341;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 223; @symbol_moduledef = [system_icon_light__save,223,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 223; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [filename,224,18,26]; @symbol_type<0> = [String,224,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__save.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [compress,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [automaticPalette,227,18,34]; @symbol_type<0> = [String,227,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [packingFormat,228,18,31]; @symbol_type<0> = [String,228,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 231; @symbol_moduledef = [prompt_color_light__body,231,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 231; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 233 18 ]
+                symbol [ Graphics %tmp.61 233 31 39 ];
+                %tmp.61 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.62 233 40 57 ];
+                %tmp.62 = getv %tmp.61 :COLOR_TRANSPARENT;
+                putv self :background %tmp.62;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [color,232,18,23]; @symbol_type<0> = [Number,232,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [background,233,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 236; @symbol_moduledef = [system_loc__subwindow,236,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 236; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [exclude,237,18,25]; @symbol_type<0> = [Boolean,237,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 240; @symbol_moduledef = [system_icon_light__warning,240,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 240; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [filename,241,18,26]; @symbol_type<0> = [String,241,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__warning.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [compress,242,18,26]; @symbol_type<0> = [String,242,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [dithering,243,18,27]; @symbol_type<0> = [String,243,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 244; @position = 18; @symbol_constdef = [automaticPalette,244,18,34]; @symbol_type<0> = [String,244,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 245; @position = 18; @symbol_constdef = [packingFormat,245,18,31]; @symbol_type<0> = [String,245,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 248; @symbol_moduledef = [confirmation_color_light__body,248,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 248; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 250 18 ]
+                symbol [ Graphics %tmp.63 250 31 39 ];
+                %tmp.63 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.64 250 40 57 ];
+                %tmp.64 = getv %tmp.63 :COLOR_TRANSPARENT;
+                putv self :background %tmp.64;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [color,249,18,23]; @symbol_type<0> = [Number,249,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [background,250,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 253; @symbol_moduledef = [confirmation_icon_light__hint_keep,253,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 253; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [filename,254,18,26]; @symbol_type<0> = [String,254,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [dithering,255,18,27]; @symbol_type<0> = [String,255,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [packingFormat,256,18,31]; @symbol_type<0> = [String,256,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 259; @symbol_moduledef = [activity_color_light__background,259,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [color,260,18,23]; @symbol_type<0> = [Number,260,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [background,261,18,28]; @symbol_type<0> = [Number,261,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 264; @symbol_moduledef = [system_icon_positive__hint_button_right_top,264,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [filename,265,18,26]; @symbol_type<0> = [String,265,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [dithering,266,18,27]; @symbol_type<0> = [String,266,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 269; @symbol_moduledef = [system_size__screen,269,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [width,270,18,23]; @symbol_type<0> = [Number,270,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [height,271,18,24]; @symbol_type<0> = [Number,271,28,34]; ]
+            const height as Number = 454;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 274; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,274,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [filename,275,18,26]; @symbol_type<0> = [String,275,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [dithering,276,18,27]; @symbol_type<0> = [String,276,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 279; @symbol_moduledef = [system_color_light__background,279,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 279; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [color,280,18,23]; @symbol_type<0> = [Number,280,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [background,281,18,28]; @symbol_type<0> = [Number,281,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 284; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,284,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 284; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [filename,285,18,26]; @symbol_type<0> = [String,285,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [dithering,286,18,27]; @symbol_type<0> = [String,286,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 289; @symbol_moduledef = [confirmation_loc__hint_confirm,289,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 289; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 290; @position = 18; @symbol_constdef = [x,290,18,19]; @symbol_type<0> = [Number,290,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [horizontalJustification,291,18,41]; @symbol_type<0> = [String,291,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [y,292,18,19]; @symbol_type<0> = [Number,292,23,29]; ]
+            const y as Number = 345;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 295; @symbol_moduledef = [activity_color_dark__text,295,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 295; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 297 18 ]
+                symbol [ Graphics %tmp.65 297 31 39 ];
+                %tmp.65 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.66 297 40 57 ];
+                %tmp.66 = getv %tmp.65 :COLOR_TRANSPARENT;
+                putv self :background %tmp.66;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [color,296,18,23]; @symbol_type<0> = [Number,296,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [background,297,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 300; @symbol_moduledef = [confirmation_input__keep,300,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 300; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 301 18 ]
+                symbol [ WatchUi %tmp.67 301 27 34 ];
+                %tmp.67 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.68 301 35 42 ];
+                %tmp.68 = getv %tmp.67 :KEY_ESC;
+                putv self :button %tmp.68;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [button,301,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 304; @symbol_moduledef = [prompt_loc__body_with_title,304,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 304; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [x,305,18,19]; @symbol_type<0> = [Number,305,23,29]; ]
+            const x as Number = 45;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [y,306,18,19]; @symbol_type<0> = [Number,306,23,29]; ]
+            const y as Number = 114;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 309; @symbol_moduledef = [system_icon_dark__search,309,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [filename,310,18,26]; @symbol_type<0> = [String,310,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__search.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 311; @position = 18; @symbol_constdef = [compress,311,18,26]; @symbol_type<0> = [String,311,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [dithering,312,18,27]; @symbol_type<0> = [String,312,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [automaticPalette,313,18,34]; @symbol_type<0> = [String,313,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [packingFormat,314,18,31]; @symbol_type<0> = [String,314,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 317; @symbol_moduledef = [activity_color_light__text,317,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 317; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 319 18 ]
+                symbol [ Graphics %tmp.69 319 31 39 ];
+                %tmp.69 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.70 319 40 57 ];
+                %tmp.70 = getv %tmp.69 :COLOR_TRANSPARENT;
+                putv self :background %tmp.70;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [color,318,18,23]; @symbol_type<0> = [Number,318,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [background,319,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 322; @symbol_moduledef = [confirmation_icon__hint_keep,322,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [filename,323,18,26]; @symbol_type<0> = [String,323,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [dithering,324,18,27]; @symbol_type<0> = [String,324,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [packingFormat,325,18,31]; @symbol_type<0> = [String,325,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 328; @symbol_moduledef = [system_icon_dark__save,328,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 328; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [filename,329,18,26]; @symbol_type<0> = [String,329,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__save.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [compress,330,18,26]; @symbol_type<0> = [String,330,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [dithering,331,18,27]; @symbol_type<0> = [String,331,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [automaticPalette,332,18,34]; @symbol_type<0> = [String,332,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 333; @position = 18; @symbol_constdef = [packingFormat,333,18,31]; @symbol_type<0> = [String,333,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 336; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,336,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 336; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [exclude,337,18,25]; @symbol_type<0> = [Boolean,337,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 340; @symbol_moduledef = [system_icon_light__search,340,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 340; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [filename,341,18,26]; @symbol_type<0> = [String,341,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__search.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [compress,342,18,26]; @symbol_type<0> = [String,342,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [dithering,343,18,27]; @symbol_type<0> = [String,343,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [automaticPalette,344,18,34]; @symbol_type<0> = [String,344,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [packingFormat,345,18,31]; @symbol_type<0> = [String,345,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 348; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,348,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 348; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [exclude,349,18,25]; @symbol_type<0> = [Boolean,349,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 352; @symbol_moduledef = [system_icon_positive__hint_button_left_top,352,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [exclude,353,18,25]; @symbol_type<0> = [Boolean,353,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 356; @symbol_moduledef = [system_loc__hint_button_right_bottom,356,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 356; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [x,357,18,19]; @symbol_type<0> = [Number,357,23,29]; ]
+            const x as Number = 342;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [y,358,18,19]; @symbol_type<0> = [Number,358,23,29]; ]
+            const y as Number = 256;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 361; @symbol_moduledef = [confirmation_icon_dark__hint_reject,361,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 361; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 362; @position = 18; @symbol_constdef = [filename,362,18,26]; @symbol_type<0> = [String,362,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [dithering,363,18,27]; @symbol_type<0> = [String,363,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [packingFormat,364,18,31]; @symbol_type<0> = [String,364,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 367; @symbol_moduledef = [confirmation_color_dark__body,367,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 367; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 369 18 ]
+                symbol [ Graphics %tmp.71 369 31 39 ];
+                %tmp.71 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.72 369 40 57 ];
+                %tmp.72 = getv %tmp.71 :COLOR_TRANSPARENT;
+                putv self :background %tmp.72;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [color,368,18,23]; @symbol_type<0> = [Number,368,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [background,369,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 372; @symbol_moduledef = [confirmation_icon_light__hint_confirm,372,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 372; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [filename,373,18,26]; @symbol_type<0> = [String,373,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [dithering,374,18,27]; @symbol_type<0> = [String,374,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 375; @position = 18; @symbol_constdef = [packingFormat,375,18,31]; @symbol_type<0> = [String,375,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 378; @symbol_moduledef = [prompt_color_dark__title,378,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 378; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 380 18 ]
+                symbol [ Graphics %tmp.73 380 31 39 ];
+                %tmp.73 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.74 380 40 57 ];
+                %tmp.74 = getv %tmp.73 :COLOR_TRANSPARENT;
+                putv self :background %tmp.74;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [color,379,18,23]; @symbol_type<0> = [Number,379,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [background,380,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 383; @symbol_moduledef = [system_icon_destructive__cancel,383,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 383; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 384; @position = 18; @symbol_constdef = [filename,384,18,26]; @symbol_type<0> = [String,384,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [dithering,385,18,27]; @symbol_type<0> = [String,385,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [packingFormat,386,18,31]; @symbol_type<0> = [String,386,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 389; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,389,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 389; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 390; @position = 18; @symbol_constdef = [filename,390,18,26]; @symbol_type<0> = [String,390,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [dithering,391,18,27]; @symbol_type<0> = [String,391,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 394; @symbol_moduledef = [prompt_loc__title,394,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 394; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 395; @position = 18; @symbol_constdef = [x,395,18,19]; @symbol_type<0> = [Number,395,23,29]; ]
+            const x as Number = 138;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 396; @position = 18; @symbol_constdef = [y,396,18,19]; @symbol_type<0> = [Number,396,23,29]; ]
+            const y as Number = 20;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 399; @symbol_moduledef = [confirmation_font_enhanced_readability__body,399,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 399; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 400 18 ]
+                symbol [ Graphics %tmp.75 400 34 42 ];
+                %tmp.75 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.76 400 43 62 ];
+                %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.77 400 63 71 ];
+                %tmp.77 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.78 400 72 92 ];
+                %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_VCENTER;
+                %tmp.79 = bitor %tmp.76 %tmp.78;
+                putv self :justification %tmp.79;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 401 18 ]
+                symbol [ Graphics %tmp.80 401 25 33 ];
+                %tmp.80 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.81 401 34 44 ];
+                %tmp.81 = getv %tmp.80 :FONT_SMALL;
+                putv self :font %tmp.81;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [justification,400,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [font,401,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 404; @symbol_moduledef = [prompt_color_light__title,404,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 404; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 406 18 ]
+                symbol [ Graphics %tmp.82 406 31 39 ];
+                %tmp.82 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.83 406 40 57 ];
+                %tmp.83 = getv %tmp.82 :COLOR_TRANSPARENT;
+                putv self :background %tmp.83;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [color,405,18,23]; @symbol_type<0> = [Number,405,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [background,406,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 409; @symbol_moduledef = [system_icon_dark__hint_button_right_top,409,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 409; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [filename,410,18,26]; @symbol_type<0> = [String,410,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [dithering,411,18,27]; @symbol_type<0> = [String,411,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 414; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,414,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 414; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [exclude,415,18,25]; @symbol_type<0> = [Boolean,415,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 418; @symbol_moduledef = [confirmation_icon_dark__hint_keep,418,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 418; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [filename,419,18,26]; @symbol_type<0> = [String,419,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 420; @position = 18; @symbol_constdef = [dithering,420,18,27]; @symbol_type<0> = [String,420,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [packingFormat,421,18,31]; @symbol_type<0> = [String,421,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 424; @symbol_moduledef = [system_icon_light__cancel,424,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [filename,425,18,26]; @symbol_type<0> = [String,425,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__cancel.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [compress,426,18,26]; @symbol_type<0> = [String,426,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [dithering,427,18,27]; @symbol_type<0> = [String,427,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [automaticPalette,428,18,34]; @symbol_type<0> = [String,428,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [packingFormat,429,18,31]; @symbol_type<0> = [String,429,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 432; @symbol_moduledef = [confirmation_icon_light__hint_reject,432,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 432; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [filename,433,18,26]; @symbol_type<0> = [String,433,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [dithering,434,18,27]; @symbol_type<0> = [String,434,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [packingFormat,435,18,31]; @symbol_type<0> = [String,435,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 438; @symbol_moduledef = [system_icon_light__about,438,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 438; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 439; @position = 18; @symbol_constdef = [filename,439,18,26]; @symbol_type<0> = [String,439,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__about.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [compress,440,18,26]; @symbol_type<0> = [String,440,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [dithering,441,18,27]; @symbol_type<0> = [String,441,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [automaticPalette,442,18,34]; @symbol_type<0> = [String,442,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [packingFormat,443,18,31]; @symbol_type<0> = [String,443,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 446; @symbol_moduledef = [system_size__toast_icon,446,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 446; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [scaleX,447,18,24]; @symbol_type<0> = [Number,447,28,34]; ]
+            const scaleX as Number = 38;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [scaleY,448,18,24]; @symbol_type<0> = [Number,448,28,34]; ]
+            const scaleY as Number = 38;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [scaleRelativeTo,449,18,33]; @symbol_type<0> = [String,449,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 452; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,452,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 453; @position = 18; @symbol_constdef = [exclude,453,18,25]; @symbol_type<0> = [Boolean,453,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 456; @symbol_moduledef = [confirmation_icon__hint_reject,456,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 456; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [filename,457,18,26]; @symbol_type<0> = [String,457,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 458; @position = 18; @symbol_constdef = [dithering,458,18,27]; @symbol_type<0> = [String,458,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 459; @position = 18; @symbol_constdef = [packingFormat,459,18,31]; @symbol_type<0> = [String,459,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 462; @symbol_moduledef = [system_icon_light__hint_action_menu,462,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 462; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [filename,463,18,26]; @symbol_type<0> = [String,463,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_action_menu.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [dithering,464,18,27]; @symbol_type<0> = [String,464,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [packingFormat,465,18,31]; @symbol_type<0> = [String,465,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 468; @symbol_moduledef = [system_icon_light__hint_button_right_middle,468,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [exclude,469,18,25]; @symbol_type<0> = [Boolean,469,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 472; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,472,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 472; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [exclude,473,18,25]; @symbol_type<0> = [Boolean,473,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 476; @symbol_moduledef = [confirmation_loc__hint_reject,476,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [x,477,18,19]; @symbol_type<0> = [Number,477,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [horizontalJustification,478,18,41]; @symbol_type<0> = [String,478,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [y,479,18,19]; @symbol_type<0> = [Number,479,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 482; @symbol_moduledef = [confirmation_icon_dark__hint_delete,482,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 482; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [filename,483,18,26]; @symbol_type<0> = [String,483,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [dithering,484,18,27]; @symbol_type<0> = [String,484,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [packingFormat,485,18,31]; @symbol_type<0> = [String,485,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 488; @symbol_moduledef = [activity_color_dark__background,488,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 488; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [color,489,18,23]; @symbol_type<0> = [Number,489,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [background,490,18,28]; @symbol_type<0> = [Number,490,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 493; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,493,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 493; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [exclude,494,18,25]; @symbol_type<0> = [Boolean,494,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 497; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,497,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 497; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [exclude,498,18,25]; @symbol_type<0> = [Boolean,498,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 501; @symbol_moduledef = [system_size__menu_icon,501,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [scaleX,502,18,24]; @symbol_type<0> = [Number,502,28,34]; ]
+            const scaleX as Number = 55;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [scaleY,503,18,24]; @symbol_type<0> = [Number,503,28,34]; ]
+            const scaleY as Number = 55;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [scaleRelativeTo,504,18,33]; @symbol_type<0> = [String,504,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 507; @symbol_moduledef = [system_icon_destructive__warning,507,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 507; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [filename,508,18,26]; @symbol_type<0> = [String,508,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__warning.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [dithering,509,18,27]; @symbol_type<0> = [String,509,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [packingFormat,510,18,31]; @symbol_type<0> = [String,510,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 513; @symbol_moduledef = [system_loc__hint_button_right_middle,513,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [exclude,514,18,25]; @symbol_type<0> = [Boolean,514,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 517; @symbol_moduledef = [system_icon_dark__cancel,517,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 517; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 518; @position = 18; @symbol_constdef = [filename,518,18,26]; @symbol_type<0> = [String,518,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__cancel.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [compress,519,18,26]; @symbol_type<0> = [String,519,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [dithering,520,18,27]; @symbol_type<0> = [String,520,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [automaticPalette,521,18,34]; @symbol_type<0> = [String,521,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [packingFormat,522,18,31]; @symbol_type<0> = [String,522,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 525; @symbol_moduledef = [prompt_size__body_with_title,525,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 525; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [width,526,18,23]; @symbol_type<0> = [Number,526,27,33]; ]
+            const width as Number = 363;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [height,527,18,24]; @symbol_type<0> = [Number,527,28,34]; ]
+            const height as Number = 250;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 530; @symbol_moduledef = [system_loc__hint_button_right_top,530,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 530; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [x,531,18,19]; @symbol_type<0> = [Number,531,23,29]; ]
+            const x as Number = 360;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [y,532,18,19]; @symbol_type<0> = [Number,532,23,29]; ]
+            const y as Number = 54;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 535; @symbol_moduledef = [system_color_light__text,535,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 535; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 537 18 ]
+                symbol [ Graphics %tmp.84 537 31 39 ];
+                %tmp.84 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.85 537 40 57 ];
+                %tmp.85 = getv %tmp.84 :COLOR_TRANSPARENT;
+                putv self :background %tmp.85;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 536; @position = 18; @symbol_constdef = [color,536,18,23]; @symbol_type<0> = [Number,536,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [background,537,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 540; @symbol_moduledef = [system_icon_light__check,540,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 540; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 541; @position = 18; @symbol_constdef = [filename,541,18,26]; @symbol_type<0> = [String,541,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__check.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [compress,542,18,26]; @symbol_type<0> = [String,542,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [dithering,543,18,27]; @symbol_type<0> = [String,543,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [automaticPalette,544,18,34]; @symbol_type<0> = [String,544,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [packingFormat,545,18,31]; @symbol_type<0> = [String,545,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 548; @symbol_moduledef = [confirmation_input__reject,548,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [y1,549,18,20]; @symbol_type<0> = [Number,549,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [x1,550,18,20]; @symbol_type<0> = [Number,550,24,30]; ]
+            const x1 as Number = 113;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [y2,551,18,20]; @symbol_type<0> = [Number,551,24,30]; ]
+            const y2 as Number = 88;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 552; @position = 18; @symbol_constdef = [x2,552,18,20]; @symbol_type<0> = [Number,552,24,30]; ]
+            const x2 as Number = 341;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 555; @symbol_moduledef = [system_icon_light__revert,555,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [filename,556,18,26]; @symbol_type<0> = [String,556,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__revert.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [compress,557,18,26]; @symbol_type<0> = [String,557,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [dithering,558,18,27]; @symbol_type<0> = [String,558,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 559; @position = 18; @symbol_constdef = [automaticPalette,559,18,34]; @symbol_type<0> = [String,559,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [packingFormat,560,18,31]; @symbol_type<0> = [String,560,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 563; @symbol_moduledef = [system_size__subwindow,563,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 563; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [exclude,564,18,25]; @symbol_type<0> = [Boolean,564,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 567; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,567,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [exclude,568,18,25]; @symbol_type<0> = [Boolean,568,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 571; @symbol_moduledef = [system_icon_dark__check,571,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [filename,572,18,26]; @symbol_type<0> = [String,572,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__check.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [compress,573,18,26]; @symbol_type<0> = [String,573,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [dithering,574,18,27]; @symbol_type<0> = [String,574,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [automaticPalette,575,18,34]; @symbol_type<0> = [String,575,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [packingFormat,576,18,31]; @symbol_type<0> = [String,576,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 579; @symbol_moduledef = [confirmation_loc__hint_keep,579,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [x,580,18,19]; @symbol_type<0> = [Number,580,23,29]; ]
+            const x as Number = 342;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [y,581,18,19]; @symbol_type<0> = [Number,581,23,29]; ]
+            const y as Number = 256;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 584; @symbol_moduledef = [confirmation_loc__hint_delete,584,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 584; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [x,585,18,19]; @symbol_type<0> = [Number,585,23,29]; ]
+            const x as Number = 358;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [y,586,18,19]; @symbol_type<0> = [Number,586,23,29]; ]
+            const y as Number = 54;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 589; @symbol_moduledef = [system_icon_positive__hint_action_menu,589,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 589; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [filename,590,18,26]; @symbol_type<0> = [String,590,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_action_menu.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [dithering,591,18,27]; @symbol_type<0> = [String,591,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [packingFormat,592,18,31]; @symbol_type<0> = [String,592,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 595; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,595,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [exclude,596,18,25]; @symbol_type<0> = [Boolean,596,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 599; @symbol_moduledef = [system_icon_light__hint_button_left_middle,599,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 599; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [exclude,600,18,25]; @symbol_type<0> = [Boolean,600,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 603; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,603,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 603; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [filename,604,18,26]; @symbol_type<0> = [String,604,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [dithering,605,18,27]; @symbol_type<0> = [String,605,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 608; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,608,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 608; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [filename,609,18,26]; @symbol_type<0> = [String,609,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [dithering,610,18,27]; @symbol_type<0> = [String,610,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 613; @symbol_moduledef = [system_icon_dark__revert,613,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 613; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [filename,614,18,26]; @symbol_type<0> = [String,614,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__revert.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [compress,615,18,26]; @symbol_type<0> = [String,615,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 616; @position = 18; @symbol_constdef = [dithering,616,18,27]; @symbol_type<0> = [String,616,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [automaticPalette,617,18,34]; @symbol_type<0> = [String,617,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [packingFormat,618,18,31]; @symbol_type<0> = [String,618,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 621; @symbol_moduledef = [confirmation_icon_light__hint_delete,621,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 621; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [filename,622,18,26]; @symbol_type<0> = [String,622,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [dithering,623,18,27]; @symbol_type<0> = [String,623,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [packingFormat,624,18,31]; @symbol_type<0> = [String,624,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 627; @symbol_moduledef = [system_icon_dark__question,627,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 627; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [filename,628,18,26]; @symbol_type<0> = [String,628,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__question.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [compress,629,18,26]; @symbol_type<0> = [String,629,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [dithering,630,18,27]; @symbol_type<0> = [String,630,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [automaticPalette,631,18,34]; @symbol_type<0> = [String,631,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [packingFormat,632,18,31]; @symbol_type<0> = [String,632,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 635; @symbol_moduledef = [system_icon_light__discard,635,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 635; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [filename,636,18,26]; @symbol_type<0> = [String,636,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__discard.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [compress,637,18,26]; @symbol_type<0> = [String,637,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [dithering,638,18,27]; @symbol_type<0> = [String,638,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [automaticPalette,639,18,34]; @symbol_type<0> = [String,639,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [packingFormat,640,18,31]; @symbol_type<0> = [String,640,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 643; @symbol_moduledef = [device_info,643,15,26]; ]
+        module device_info {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 643; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 645 18 ]
+                symbol [ Toybox %tmp.87 645 32 38 ];
+                %tmp.87 = getv ? :Toybox;
+                symbol [ System %tmp.88 645 39 45 ];
+                %tmp.88 = getv %tmp.87 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.89 645 46 64 ];
+                %tmp.89 = getv %tmp.88 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.89;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [screenWidth,644,18,29]; @symbol_type<0> = [Number,644,33,39]; ]
+            const screenWidth as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [screenShape,645,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [hasNightMode,646,18,30]; @symbol_type<0> = [Boolean,646,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [hasGpu,647,18,24]; @symbol_type<0> = [Boolean,647,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [screenHeight,648,18,30]; @symbol_type<0> = [Number,648,34,40]; ]
+            const screenHeight as Number = 454;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [hasTouchScreen,649,18,32]; @symbol_type<0> = [Boolean,649,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,650,18,44]; @symbol_type<0> = [Boolean,650,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = true;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 653; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,653,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 653; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [filename,654,18,26]; @symbol_type<0> = [String,654,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [dithering,655,18,27]; @symbol_type<0> = [String,655,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [packingFormat,656,18,31]; @symbol_type<0> = [String,656,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 659; @symbol_moduledef = [prompt_font__body_no_title,659,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 659; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 660 18 ]
+                symbol [ Graphics %tmp.90 660 34 42 ];
+                %tmp.90 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.91 660 43 62 ];
+                %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.92 660 63 71 ];
+                %tmp.92 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.93 660 72 92 ];
+                %tmp.93 = getv %tmp.92 :TEXT_JUSTIFY_VCENTER;
+                %tmp.94 = bitor %tmp.91 %tmp.93;
+                putv self :justification %tmp.94;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 661 18 ]
+                symbol [ Graphics %tmp.95 661 25 33 ];
+                %tmp.95 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.96 661 34 43 ];
+                %tmp.96 = getv %tmp.95 :FONT_TINY;
+                putv self :font %tmp.96;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [justification,660,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [font,661,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 664; @symbol_moduledef = [prompt_size__title_icon,664,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 664; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [scaleX,665,18,24]; @symbol_type<0> = [Float,665,28,33]; ]
+            const scaleX as Float = 0.14;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [scaleRelativeTo,666,18,33]; @symbol_type<0> = [String,666,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 669; @symbol_moduledef = [system_icon_dark__warning,669,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 669; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [filename,670,18,26]; @symbol_type<0> = [String,670,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__warning.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [compress,671,18,26]; @symbol_type<0> = [String,671,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [dithering,672,18,27]; @symbol_type<0> = [String,672,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [automaticPalette,673,18,34]; @symbol_type<0> = [String,673,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [packingFormat,674,18,31]; @symbol_type<0> = [String,674,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 677; @symbol_moduledef = [prompt_loc__title_icon,677,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 677; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [x,678,18,19]; @symbol_type<0> = [Number,678,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 679; @position = 18; @symbol_constdef = [y,679,18,19]; @symbol_type<0> = [Number,679,23,29]; ]
+            const y as Number = 45;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 680; @position = 18; @symbol_constdef = [horizontalJustification,680,18,41]; @symbol_type<0> = [String,680,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [verticalJustification,681,18,39]; @symbol_type<0> = [String,681,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 684; @symbol_moduledef = [prompt_font_enhanced_readability__title,684,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 684; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 685 18 ]
+                symbol [ Graphics %tmp.97 685 34 42 ];
+                %tmp.97 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.98 685 43 62 ];
+                %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.99 685 63 71 ];
+                %tmp.99 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.100 685 72 92 ];
+                %tmp.100 = getv %tmp.99 :TEXT_JUSTIFY_VCENTER;
+                %tmp.101 = bitor %tmp.98 %tmp.100;
+                putv self :justification %tmp.101;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 686 18 ]
+                symbol [ Graphics %tmp.102 686 25 33 ];
+                %tmp.102 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.103 686 34 44 ];
+                %tmp.103 = getv %tmp.102 :FONT_XTINY;
+                putv self :font %tmp.103;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 685; @position = 18; @symbol_constdef = [justification,685,18,31]; ]
+            const justification;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 686; @position = 18; @symbol_constdef = [font,686,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 689; @symbol_moduledef = [prompt_color_dark__body,689,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 689; ]
+            <init> {
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen" 691 18 ]
+                symbol [ Graphics %tmp.104 691 31 39 ];
+                %tmp.104 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.105 691 40 57 ];
+                %tmp.105 = getv %tmp.104 :COLOR_TRANSPARENT;
+                putv self :background %tmp.105;
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 690; @position = 18; @symbol_constdef = [color,690,18,23]; @symbol_type<0> = [Number,690,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 691; @position = 18; @symbol_constdef = [background,691,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 694; @symbol_moduledef = [confirmation_icon__hint_delete,694,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 694; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 695; @position = 18; @symbol_constdef = [filename,695,18,26]; @symbol_type<0> = [String,695,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 696; @position = 18; @symbol_constdef = [dithering,696,18,27]; @symbol_type<0> = [String,696,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 697; @position = 18; @symbol_constdef = [packingFormat,697,18,31]; @symbol_type<0> = [String,697,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 700; @symbol_moduledef = [system_icon_light__hint_button_right_top,700,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 700; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 701; @position = 18; @symbol_constdef = [filename,701,18,26]; @symbol_type<0> = [String,701,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 702; @position = 18; @symbol_constdef = [dithering,702,18,27]; @symbol_type<0> = [String,702,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 705; @symbol_moduledef = [confirmation_size__body,705,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 705; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 706; @position = 18; @symbol_constdef = [width,706,18,23]; @symbol_type<0> = [Number,706,27,33]; ]
+            const width as Number = 269;
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 707; @position = 18; @symbol_constdef = [height,707,18,24]; @symbol_type<0> = [Number,707,28,34]; ]
+            const height as Number = 272;
+        }
+        [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 710; @symbol_moduledef = [system_icon_positive__check,710,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 710; ]
+            <init> {
+            }
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 711; @position = 18; @symbol_constdef = [filename,711,18,26]; @symbol_type<0> = [String,711,30,36]; ]
+            const filename as String = "/Users/arturs/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__check.svg";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 712; @position = 18; @symbol_constdef = [dithering,712,18,27]; @symbol_type<0> = [String,712,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 713; @position = 18; @symbol_constdef = [packingFormat,713,18,31]; @symbol_type<0> = [String,713,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}
