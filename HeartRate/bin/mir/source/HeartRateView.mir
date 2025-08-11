@@ -1,64 +1,233 @@
-[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
-import Toybox.Graphics;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
 [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 4; @symbol_classdef = [HeartRateView,4,6,19]; @symbol_extends<0> = [WatchUi,4,28,35]; @symbol_extends<1> = [View,4,36,40]; ]
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 6; @symbol_classdef = [HeartRateView,6,6,19]; @symbol_extends<0> = [WatchUi,6,28,35]; @symbol_extends<1> = [View,6,36,40]; ]
 class HeartRateView extends WatchUi.View {
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 4; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 4; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
     function initialize() as Void {
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_6_26_8_4_start:
-[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 7 8 ]
-        symbol [ View %tmp.2 7 8 12 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_8_26_10_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 9 8 ]
+        symbol [ View %tmp.2 9 8 12 ];
         %tmp.2 = getv ? :View;
-        symbol [ initialize %tmp.3 7 13 23 ];
+        symbol [ initialize %tmp.3 9 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_6_26_8_4_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_8_26_10_4_stop:
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 11; @symbol_functiondef = [onLayout,11,13,21]; @symbol_param<0> = [dc,11,22,24]; @symbol_param<0>_type<0> = [Dc,11,28,30]; ]
-    function onLayout(dc as Dc) as Void {
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_11_40_13_4_start:
-[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 12 8 ]
-        %tmp.1 = self;
-        symbol [ setLayout %tmp.2 12 8 17 ];
-        %tmp.2 = getv function %tmp.1 :setLayout;
-        symbol [ Rez %tmp.4 12 18 21 ];
-        %tmp.4 = getv ? :Rez;
-        symbol [ Layouts %tmp.5 12 22 29 ];
-        %tmp.5 = getv %tmp.4 :Layouts;
-        symbol [ MainLayout %tmp.6 12 30 40 ];
-        %tmp.6 = getv function %tmp.5 :MainLayout;
-        %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 12 41 43 ];
-        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
-        invoke %tmp.1 %tmp.2(%tmp.8);
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_11_40_13_4_stop:
-    }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 18; @symbol_functiondef = [onShow,18,13,19]; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 13; @symbol_functiondef = [onShow,13,13,19]; ]
     function onShow() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_13_30_15_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 14 8 ]
+        symbol [ System %tmp.1 14 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 14 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "TEST: View is showing!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_13_30_15_4_stop:
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 22; @symbol_functiondef = [onUpdate,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
-    function onUpdate(dc as Dc) as Void {
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_22_40_25_4_start:
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 18; @symbol_functiondef = [onUpdate,18,13,21]; @symbol_param<0> = [dc,18,22,24]; @symbol_param<0>_type<0> = [Graphics,18,28,36]; @symbol_param<0>_type<1> = [Dc,18,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 20 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 20 8 10 ];
+        symbol [ setColor %tmp.2 20 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 20 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 20 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 20 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 20 51 62 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 21 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 21 8 10 ];
+        symbol [ clear %tmp.8 21 11 16 ];
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
 [ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 24 8 ]
-        symbol [ View %tmp.2 24 8 12 ];
-        %tmp.2 = getv ? :View;
-        symbol [ onUpdate %tmp.3 24 13 21 ];
-        %tmp.3 = getv function %tmp.2 :onUpdate;
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 24 22 24 ];
-        invoke %tmp.2 %tmp.3(%tmp.4);
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_22_40_25_4_stop:
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 24 8 10 ];
+        symbol [ setColor %tmp.10 24 11 19 ];
+        %tmp.10 = getv function %tmp.9 :setColor;
+        symbol [ Graphics %tmp.11 24 20 28 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.12 24 29 40 ];
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        symbol [ Graphics %tmp.13 24 42 50 ];
+        %tmp.13 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.14 24 51 68 ];
+        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 27 8 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 27 12 17 ];
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 27 20 22 ];
+        symbol [ getWidth %tmp.16 27 23 31 ];
+        %tmp.16 = getv function %tmp.15 :getWidth;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %width.1 %tmp.17;
+        symbol [ width %width.1 27 12 17 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 28 8 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 28 12 18 ];
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 28 21 23 ];
+        symbol [ getHeight %tmp.19 28 24 33 ];
+        %tmp.19 = getv function %tmp.18 :getHeight;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %height.2 %tmp.20;
+        symbol [ height %height.2 28 12 18 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 31 8 ]
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 31 8 10 ];
+        symbol [ drawText %tmp.22 31 11 19 ];
+        %tmp.22 = getv function %tmp.21 :drawText;
+        %tmp.23 = lgetv %width.1;
+        symbol [ width %tmp.23 32 12 17 ];
+        %tmp.24 = 2;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = lgetv %height.2;
+        symbol [ height %tmp.26 33 12 18 ];
+        %tmp.27 = 4;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        symbol [ Graphics %tmp.29 34 12 20 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.30 34 21 31 ];
+        %tmp.30 = getv %tmp.29 :FONT_LARGE;
+        %tmp.31 = "TEST MODE";
+        symbol [ Graphics %tmp.32 36 12 20 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.33 36 21 40 ];
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.21 %tmp.22(%tmp.25, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 39 8 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 39 8 10 ];
+        symbol [ drawText %tmp.35 39 11 19 ];
+        %tmp.35 = getv function %tmp.34 :drawText;
+        %tmp.36 = lgetv %width.1;
+        symbol [ width %tmp.36 40 12 17 ];
+        %tmp.37 = 2;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        %tmp.39 = lgetv %height.2;
+        symbol [ height %tmp.39 41 12 18 ];
+        %tmp.40 = 2;
+        %tmp.41 = div %tmp.39 %tmp.40;
+        symbol [ Graphics %tmp.42 42 12 20 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.43 42 21 32 ];
+        %tmp.43 = getv %tmp.42 :FONT_MEDIUM;
+        %tmp.44 = "App is Running!";
+        symbol [ Graphics %tmp.45 44 12 20 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 44 21 40 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.34 %tmp.35(%tmp.38, %tmp.41, %tmp.43, %tmp.44, %tmp.46);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 48 8 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_stop" ]
+        %clockTime.3 = local;
+        symbol [ clockTime %clockTime.3 48 12 21 ];
+        symbol [ System %tmp.47 48 24 30 ];
+        %tmp.47 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.48 48 31 43 ];
+        %tmp.48 = getv function %tmp.47 :getClockTime;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        lputv %clockTime.3 %tmp.49;
+        symbol [ clockTime %clockTime.3 48 12 21 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 49 8 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_stop" ]
+        %timeString.4 = local;
+        symbol [ timeString %timeString.4 49 12 22 ];
+        %tmp.50 = lgetv %clockTime.3;
+        symbol [ clockTime %tmp.50 49 25 34 ];
+        symbol [ hour %tmp.51 49 35 39 ];
+        %tmp.51 = getv %tmp.50 :hour;
+        symbol [ format %tmp.52 49 40 46 ];
+        %tmp.52 = getv function %tmp.51 :format;
+        %tmp.53 = "%02d";
+        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
+        %tmp.55 = ":";
+        %tmp.56 = add %tmp.54 %tmp.55;
+        %tmp.57 = lgetv %clockTime.3;
+        symbol [ clockTime %tmp.57 49 63 72 ];
+        symbol [ min %tmp.58 49 73 76 ];
+        %tmp.58 = getv %tmp.57 :min;
+        symbol [ format %tmp.59 49 77 83 ];
+        %tmp.59 = getv function %tmp.58 :format;
+        %tmp.60 = "%02d";
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        %tmp.62 = add %tmp.56 %tmp.61;
+        lputv %timeString.4 %tmp.62;
+        symbol [ timeString %timeString.4 49 12 22 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 51 8 ]
+        %tmp.63 = lgetv %dc;
+        symbol [ dc %tmp.63 51 8 10 ];
+        symbol [ drawText %tmp.64 51 11 19 ];
+        %tmp.64 = getv function %tmp.63 :drawText;
+        %tmp.65 = lgetv %width.1;
+        symbol [ width %tmp.65 52 12 17 ];
+        %tmp.66 = 2;
+        %tmp.67 = div %tmp.65 %tmp.66;
+        %tmp.68 = lgetv %height.2;
+        symbol [ height %tmp.68 53 12 18 ];
+        %tmp.69 = 3;
+        %tmp.70 = mul %tmp.68 %tmp.69;
+        %tmp.71 = 4;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        symbol [ Graphics %tmp.73 54 12 20 ];
+        %tmp.73 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.74 54 21 32 ];
+        %tmp.74 = getv %tmp.73 :FONT_MEDIUM;
+        %tmp.75 = lgetv %timeString.4;
+        symbol [ timeString %tmp.75 55 12 22 ];
+        symbol [ Graphics %tmp.76 56 12 20 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.77 56 21 40 ];
+        %tmp.77 = getv %tmp.76 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.63 %tmp.64(%tmp.67, %tmp.72, %tmp.74, %tmp.75, %tmp.77);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 59 8 ]
+        symbol [ System %tmp.78 59 8 14 ];
+        %tmp.78 = getm $.Toybox.System;
+        symbol [ println %tmp.79 59 15 22 ];
+        %tmp.79 = getv function %tmp.78 :println;
+        %tmp.80 = "TEST: View updated at ";
+        %tmp.81 = lgetv %timeString.4;
+        symbol [ timeString %tmp.81 59 50 60 ];
+        %tmp.82 = add %tmp.80 %tmp.81;
+        invoke %tmp.78 %tmp.79(%tmp.82);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_18_49_60_4_stop:
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 30; @symbol_functiondef = [onHide,30,13,19]; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 63; @symbol_functiondef = [onHide,63,13,19]; ]
     function onHide() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_63_30_65_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" 64 8 ]
+        symbol [ System %tmp.1 64 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 64 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "TEST: View is hiding!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateView_mc_63_30_65_4_stop:
     }
 }
 [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc"; @line = 1; ]

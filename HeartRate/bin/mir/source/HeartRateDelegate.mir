@@ -2,53 +2,896 @@
 import Toybox.Lang;
 [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
 import Toybox.WatchUi;
-[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 4; @symbol_classdef = [HeartRateDelegate,4,6,23]; @symbol_extends<0> = [WatchUi,4,32,39]; @symbol_extends<1> = [BehaviorDelegate,4,40,56]; ]
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Sensor,3,14,20]; ]
+import Toybox.Sensor;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Timer,4,14,19]; ]
+import Toybox.Timer;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [System,5,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Communications,6,14,28]; ]
+import Toybox.Communications;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Position,7,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 15; @symbol_classdef = [HeartRateDelegate,15,6,23]; @symbol_extends<0> = [WatchUi,15,32,39]; @symbol_extends<1> = [BehaviorDelegate,15,40,56]; ]
 class HeartRateDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 15; ]
     <init> {
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 15; ]
     static
     <init> {
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 18; @position = 16; @symbol_vardef = [_currentHeartRate,18,16,33]; @symbol_type<0> = [Number,18,37,43]; ]
+    private
+    var _currentHeartRate as Number or Null;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 19; @position = 16; @symbol_vardef = [_monitoringTimer,19,16,32]; @symbol_type<0> = [Timer,19,36,41]; @symbol_type<1> = [Timer,19,42,47]; ]
+    private
+    var _monitoringTimer as Timer.Timer or Null;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 20; @position = 16; @symbol_vardef = [_highHRStartTime,20,16,32]; @symbol_type<0> = [Number,20,36,42]; ]
+    private
+    var _highHRStartTime as Number or Null;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 21; @position = 16; @symbol_vardef = [_alertSent,21,16,26]; @symbol_type<0> = [Boolean,21,30,37]; ]
+    private
+    var _alertSent as Boolean = false;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 24; @position = 18; @symbol_constdef = [WARNING_THRESHOLD,24,18,35]; ]
+    private
+    const WARNING_THRESHOLD = 170;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 25; @position = 18; @symbol_constdef = [ALERT_THRESHOLD,25,18,33]; ]
+    private
+    const ALERT_THRESHOLD = 180;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 26; @position = 18; @symbol_constdef = [ALERT_DURATION,26,18,32]; ]
+    private
+    const ALERT_DURATION = 30;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 29; @position = 16; @symbol_vardef = [_isMonitoring,29,16,29]; @symbol_type<0> = [Boolean,29,33,40]; ]
+    private
+    var _isMonitoring as Boolean = false;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 31; @symbol_functiondef = [initialize,31,13,23]; ]
     function initialize() as Void {
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_6_26_8_4_start:
-[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 7 8 ]
-        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_31_26_35_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 32 8 ]
+        symbol [ BehaviorDelegate %tmp.2 32 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 7 25 35 ];
+        symbol [ initialize %tmp.3 32 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_6_26_8_4_stop:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 33 8 ]
+        symbol [ System %tmp.4 33 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 33 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "Initializing heart rate app...";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 34 8 ]
+        %tmp.7 = self;
+        symbol [ initializeHeartRateMonitoring %tmp.8 34 8 37 ];
+        %tmp.8 = getv function %tmp.7 :initializeHeartRateMonitoring;
+        invoke %tmp.7 %tmp.8();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_31_26_35_4_stop:
     }
-    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 10; @symbol_functiondef = [onMenu,10,13,19]; @symbol_return<0> = [Boolean,10,25,32]; ]
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 37; @symbol_functiondef = [onMenu,37,13,19]; @symbol_return<0> = [Boolean,37,25,32]; ]
     function onMenu() as Boolean {
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_10_33_13_4_start:
-[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 11 8 ]
-        symbol [ WatchUi %tmp.1 11 8 15 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_37_33_40_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 38 8 ]
+        symbol [ WatchUi %tmp.1 38 8 15 ];
         %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.2 11 16 24 ];
+        symbol [ pushView %tmp.2 38 16 24 ];
         %tmp.2 = getv function %tmp.1 :pushView;
-        symbol [ Rez %tmp.6 11 29 32 ];
+        symbol [ Rez %tmp.6 38 29 32 ];
         %tmp.6 = getv ? :Rez;
-        symbol [ Menus %tmp.7 11 33 38 ];
+        symbol [ Menus %tmp.7 38 33 38 ];
         %tmp.7 = getv %tmp.6 :Menus;
-        symbol [ MainMenu %tmp.8 11 39 47 ];
+        symbol [ MainMenu %tmp.8 38 39 47 ];
         %tmp.8 = getv function ? %tmp.7 :MainMenu;
         %tmp.3 = newc %tmp.8 ();
-        symbol [ HeartRateMenuDelegate %tmp.12 11 55 76 ];
+        symbol [ HeartRateMenuDelegate %tmp.12 38 55 76 ];
         %tmp.12 = getv ? :HeartRateMenuDelegate;
         %tmp.9 = newc %tmp.12 ();
-        symbol [ WatchUi %tmp.13 11 80 87 ];
+        symbol [ WatchUi %tmp.13 38 80 87 ];
         %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 11 88 96 ];
+        symbol [ SLIDE_UP %tmp.14 38 88 96 ];
         %tmp.14 = getv %tmp.13 :SLIDE_UP;
         invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
-[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 12 8 ]
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 39 8 ]
         %tmp.15 = true;
         ret %tmp.15;
-_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_10_33_13_4_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_37_33_40_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 43; @symbol_functiondef = [initializeHeartRateMonitoring,43,13,42]; ]
+    function initializeHeartRateMonitoring() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_43_53_61_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 44 8 ]
+        symbol [ System %tmp.1 44 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 44 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Starting heart rate monitoring...";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 46 8 ]
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_beginTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_endTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_beginTry:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_12_58_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 48 12 ]
+        symbol [ Sensor %tmp.4 48 12 18 ];
+        %tmp.4 = getm $.Toybox.Sensor;
+        symbol [ setEnabledSensors %tmp.5 48 19 36 ];
+        %tmp.5 = getv function %tmp.4 :setEnabledSensors;
+        %tmp.6 = newa 1;
+        symbol [ Sensor %tmp.7 48 38 44 ];
+        %tmp.7 = getm $.Toybox.Sensor;
+        symbol [ SENSOR_HEARTRATE %tmp.8 48 45 61 ];
+        %tmp.8 = getv %tmp.7 :SENSOR_HEARTRATE;
+        %tmp.9 = dup %tmp.6;
+        %tmp.10 = aputv %tmp.9 0 %tmp.8;
+        invoke %tmp.4 %tmp.5(%tmp.10);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 49 12 ]
+        symbol [ System %tmp.11 49 12 18 ];
+        %tmp.11 = getm $.Toybox.System;
+        symbol [ println %tmp.12 49 19 26 ];
+        %tmp.12 = getv function %tmp.11 :println;
+        %tmp.13 = "Heart rate sensor enabled";
+        invoke %tmp.11 %tmp.12(%tmp.13);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 52 12 ]
+        symbol [ Timer %tmp.16 52 35 40 ];
+        %tmp.16 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.17 52 41 46 ];
+        %tmp.17 = getv function ? %tmp.16 :Timer;
+        %tmp.14 = newc %tmp.17 ();
+        symbol [ _monitoringTimer ? 52 12 28 ];
+        putv self :_monitoringTimer %tmp.14;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 53 12 ]
+        symbol [ _monitoringTimer %tmp.19 53 12 28 ];
+        %tmp.19 = getv ? :_monitoringTimer;
+        symbol [ start %tmp.20 53 29 34 ];
+        %tmp.20 = getv function %tmp.19 :start;
+        %tmp.21 = self;
+        symbol [ method %tmp.22 53 35 41 ];
+        %tmp.22 = getv function %tmp.21 :method;
+        %tmp.24 = const :checkHeartRate;
+        symbol [ checkHeartRate %tmp.24 53 43 57 const ];
+        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
+        %tmp.26 = 3000;
+        %tmp.27 = true;
+        invoke %tmp.19 %tmp.20(%tmp.25, %tmp.26, %tmp.27);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 55 12 ]
+        %tmp.28 = true;
+        symbol [ _isMonitoring ? 55 12 25 ];
+        putv self :_isMonitoring %tmp.28;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 56 12 ]
+        symbol [ System %tmp.29 56 12 18 ];
+        %tmp.29 = getm $.Toybox.System;
+        symbol [ println %tmp.30 56 19 26 ];
+        %tmp.30 = getv function %tmp.29 :println;
+        %tmp.31 = "Heart rate monitoring started!";
+        invoke %tmp.29 %tmp.30(%tmp.31);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_12_58_8_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_endTry:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_catch:
+        %tmp.32 = exception;
+        push %tmp.32;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 58 10 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_catch" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_10_60_8_end" ]
+        %ex.1 = local;
+        symbol [ ex %ex.1 58 17 19 ];
+        %tmp.33 = dup %tmp.32;
+        lputv %ex.1 %tmp.33;
+        symbol [ ex %ex.1 58 17 19 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_21_60_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 59 12 ]
+        symbol [ System %tmp.34 59 12 18 ];
+        %tmp.34 = getm $.Toybox.System;
+        symbol [ println %tmp.35 59 19 26 ];
+        %tmp.35 = getv function %tmp.34 :println;
+        %tmp.36 = "Error initializing heart rate monitoring: ";
+        %tmp.37 = lgetv %ex.1;
+        symbol [ ex %tmp.37 59 74 76 ];
+        symbol [ getErrorMessage %tmp.38 59 77 92 ];
+        %tmp.38 = getv function %tmp.37 :getErrorMessage;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = add %tmp.36 %tmp.39;
+        invoke %tmp.34 %tmp.35(%tmp.40);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_21_60_8_stop:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally;
+        pop;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_10_60_8_end:
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_10_60_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_58_10_60_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally;
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally;
+        throw %tmp.32;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_finally:
+        jsrret;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_46_8_60_8_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_43_53_61_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 64; @symbol_functiondef = [checkHeartRate,64,13,27]; ]
+    function checkHeartRate() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_64_38_85_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 65 8 ]
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_beginTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_endTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_beginTry:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_12_82_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 67 12 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_12_82_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_12_82_8_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 67 16 20 ];
+        symbol [ Sensor %tmp.1 67 23 29 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ getInfo %tmp.2 67 30 37 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 67 16 20 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 69 12 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_stmt:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_16_69_57_begin:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 69 16 20 ];
+        %tmp.6 = const :heartRate;
+        symbol [ heartRate %tmp.6 69 26 35 const ];
+        %tmp.7 = canhazplz %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_else_false;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_39_69_57_true:
+        %tmp.8 = lgetv %info.1;
+        symbol [ info %tmp.8 69 39 43 ];
+        %tmp.9 = as %tmp.8 { (interface { var heartRate; }) };
+        symbol [ heartRate %tmp.10 69 44 53 ];
+        %tmp.10 = getv %tmp.9 :heartRate;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        push %tmp.12;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_39_69_57_end:
+        %tmp.13 = phi [%tmp.7 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_16_69_57_begin] [%tmp.12 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_39_69_57_true] [%tmp.13 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_39_69_57_end];
+        bf %tmp.13 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_else_false;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_63_76_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 70 16 ]
+        %tmp.14 = lgetv %info.1;
+        symbol [ info %tmp.14 70 36 40 ];
+        %tmp.15 = as %tmp.14 { (interface { var heartRate; }) };
+        symbol [ heartRate %tmp.16 70 41 50 ];
+        %tmp.16 = getv %tmp.15 :heartRate;
+        symbol [ _currentHeartRate ? 70 16 33 ];
+        putv self :_currentHeartRate %tmp.16;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 71 16 ]
+        symbol [ System %tmp.17 71 16 22 ];
+        %tmp.17 = getm $.Toybox.System;
+        symbol [ println %tmp.18 71 23 30 ];
+        %tmp.18 = getv function %tmp.17 :println;
+        %tmp.19 = "Heart Rate: ";
+        symbol [ _currentHeartRate %tmp.21 71 48 65 ];
+        %tmp.21 = getv ? :_currentHeartRate;
+        %tmp.22 = add %tmp.19 %tmp.21;
+        %tmp.23 = " BPM";
+        %tmp.24 = add %tmp.22 %tmp.23;
+        invoke %tmp.17 %tmp.18(%tmp.24);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 74 16 ]
+        %tmp.25 = self;
+        symbol [ checkForAlerts %tmp.26 74 16 30 ];
+        %tmp.26 = getv function %tmp.25 :checkForAlerts;
+        invoke %tmp.25 %tmp.26();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_63_76_12_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_else_false:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_76_19_80_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 77 16 ]
+        symbol [ System %tmp.27 77 16 22 ];
+        %tmp.27 = getm $.Toybox.System;
+        symbol [ println %tmp.28 77 23 30 ];
+        %tmp.28 = getv function %tmp.27 :println;
+        %tmp.29 = "No heart rate data available";
+        invoke %tmp.27 %tmp.28(%tmp.29);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 79 16 ]
+        %tmp.30 = self;
+        symbol [ simulateHeartRateForTesting %tmp.31 79 16 43 ];
+        %tmp.31 = getv function %tmp.30 :simulateHeartRateForTesting;
+        invoke %tmp.30 %tmp.31();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_76_19_80_12_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_69_12_80_12_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_12_82_8_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_endTry:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_catch:
+        %tmp.32 = exception;
+        push %tmp.32;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 82 10 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_catch" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_10_84_8_end" ]
+        %ex.2 = local;
+        symbol [ ex %ex.2 82 17 19 ];
+        %tmp.33 = dup %tmp.32;
+        lputv %ex.2 %tmp.33;
+        symbol [ ex %ex.2 82 17 19 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_21_84_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 83 12 ]
+        symbol [ System %tmp.34 83 12 18 ];
+        %tmp.34 = getm $.Toybox.System;
+        symbol [ println %tmp.35 83 19 26 ];
+        %tmp.35 = getv function %tmp.34 :println;
+        %tmp.36 = "Error reading heart rate: ";
+        %tmp.37 = lgetv %ex.2;
+        symbol [ ex %tmp.37 83 58 60 ];
+        symbol [ getErrorMessage %tmp.38 83 61 76 ];
+        %tmp.38 = getv function %tmp.37 :getErrorMessage;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = add %tmp.36 %tmp.39;
+        invoke %tmp.34 %tmp.35(%tmp.40);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_21_84_8_stop:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally;
+        pop;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_10_84_8_end:
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_10_84_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_82_10_84_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally;
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally;
+        throw %tmp.32;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_finally:
+        jsrret;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_65_8_84_8_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_64_38_85_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 88; @symbol_functiondef = [checkForAlerts,88,13,27]; ]
+    function checkForAlerts() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_88_38_126_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 89 8 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_8_91_8_if_stmt:
+        symbol [ _currentHeartRate %tmp.2 89 12 29 ];
+        %tmp.2 = getv ? :_currentHeartRate;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_8_91_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_8_91_8_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_39_91_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 90 12 ]
+        ret ?;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_39_91_8_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_8_91_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_89_8_91_8_if_end:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 93 8 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_88_38_126_4_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_88_38_126_4_stop" ]
+        %currentTime.1 = local;
+        symbol [ currentTime %currentTime.1 93 12 23 ];
+        symbol [ System %tmp.5 93 26 32 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.6 93 33 41 ];
+        %tmp.6 = getv function %tmp.5 :getTimer;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %currentTime.1 %tmp.7;
+        symbol [ currentTime %currentTime.1 93 12 23 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 96 8 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_stmt:
+        symbol [ _currentHeartRate %tmp.9 96 12 29 ];
+        %tmp.9 = getv ? :_currentHeartRate;
+        symbol [ ALERT_THRESHOLD %tmp.11 96 33 48 ];
+        %tmp.11 = getv ? :ALERT_THRESHOLD;
+        %tmp.12 = gte %tmp.9 %tmp.11;
+        bf %tmp.12 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_false;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_50_114_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 98 12 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_stmt:
+        symbol [ _highHRStartTime %tmp.14 98 16 32 ];
+        %tmp.14 = getv ? :_highHRStartTime;
+        %tmp.15 = null;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_else_false;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_42_102_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 100 16 ]
+        %tmp.17 = lgetv %currentTime.1;
+        symbol [ currentTime %tmp.17 100 35 46 ];
+        symbol [ _highHRStartTime ? 100 16 32 ];
+        putv self :_highHRStartTime %tmp.17;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 101 16 ]
+        symbol [ System %tmp.18 101 16 22 ];
+        %tmp.18 = getm $.Toybox.System;
+        symbol [ println %tmp.19 101 23 30 ];
+        %tmp.19 = getv function %tmp.18 :println;
+        %tmp.20 = "HIGH HEART RATE DETECTED! Starting timer...";
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_42_102_12_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_else_false:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_102_19_112_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 104 16 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_102_19_112_12_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_102_19_112_12_stop" ]
+        %highDuration.2 = local;
+        symbol [ highDuration %highDuration.2 104 20 32 ];
+        %tmp.21 = lgetv %currentTime.1;
+        symbol [ currentTime %tmp.21 104 36 47 ];
+        symbol [ _highHRStartTime %tmp.23 104 50 66 ];
+        %tmp.23 = getv ? :_highHRStartTime;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        %tmp.25 = sub %tmp.21 %tmp.24;
+        %tmp.26 = 1000;
+        %tmp.27 = div %tmp.25 %tmp.26;
+        lputv %highDuration.2 %tmp.27;
+        symbol [ highDuration %highDuration.2 104 20 32 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 106 16 ]
+        symbol [ System %tmp.28 106 16 22 ];
+        %tmp.28 = getm $.Toybox.System;
+        symbol [ println %tmp.29 106 23 30 ];
+        %tmp.29 = getv function %tmp.28 :println;
+        %tmp.30 = "High HR duration: ";
+        %tmp.31 = lgetv %highDuration.2;
+        symbol [ highDuration %tmp.31 106 54 66 ];
+        %tmp.32 = add %tmp.30 %tmp.31;
+        %tmp.33 = " seconds";
+        %tmp.34 = add %tmp.32 %tmp.33;
+        invoke %tmp.28 %tmp.29(%tmp.34);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 109 16 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_stmt:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_20_109_55_begin:
+        %tmp.35 = lgetv %highDuration.2;
+        symbol [ highDuration %tmp.35 109 20 32 ];
+        symbol [ ALERT_DURATION %tmp.37 109 36 50 ];
+        %tmp.37 = getv ? :ALERT_DURATION;
+        %tmp.38 = gte %tmp.35 %tmp.37;
+        bf %tmp.38 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_54_109_55_true:
+        symbol [ _alertSent %tmp.40 109 55 65 ];
+        %tmp.40 = getv ? :_alertSent;
+        %tmp.41 = not %tmp.40;
+        push %tmp.41;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_54_109_55_end:
+        %tmp.42 = phi [%tmp.38 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_20_109_55_begin] [%tmp.41 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_54_109_55_true] [%tmp.42 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_54_109_55_end];
+        bf %tmp.42 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_67_111_16_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 110 20 ]
+        %tmp.43 = self;
+        symbol [ sendEmergencyAlert %tmp.44 110 20 38 ];
+        %tmp.44 = getv function %tmp.43 :sendEmergencyAlert;
+        invoke %tmp.43 %tmp.44();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_67_111_16_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_109_16_111_16_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_102_19_112_12_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_98_12_112_12_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_50_114_8_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_false:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 114 15 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_stmt:
+        symbol [ _currentHeartRate %tmp.46 114 19 36 ];
+        %tmp.46 = getv ? :_currentHeartRate;
+        symbol [ WARNING_THRESHOLD %tmp.48 114 40 57 ];
+        %tmp.48 = getv ? :WARNING_THRESHOLD;
+        %tmp.49 = gte %tmp.46 %tmp.48;
+        bf %tmp.49 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_else_false;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_59_118_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 116 12 ]
+        symbol [ System %tmp.50 116 12 18 ];
+        %tmp.50 = getm $.Toybox.System;
+        symbol [ println %tmp.51 116 19 26 ];
+        %tmp.51 = getv function %tmp.50 :println;
+        %tmp.52 = "WARNING: Heart rate elevated (";
+        symbol [ _currentHeartRate %tmp.54 116 62 79 ];
+        %tmp.54 = getv ? :_currentHeartRate;
+        %tmp.55 = add %tmp.52 %tmp.54;
+        %tmp.56 = " BPM)";
+        %tmp.57 = add %tmp.55 %tmp.56;
+        invoke %tmp.50 %tmp.51(%tmp.57);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_59_118_8_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_else_false:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_118_15_125_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 120 12 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_12_124_12_if_stmt:
+        symbol [ _highHRStartTime %tmp.59 120 16 32 ];
+        %tmp.59 = getv ? :_highHRStartTime;
+        %tmp.60 = null;
+        %tmp.61 = ne %tmp.59 %tmp.60;
+        bf %tmp.61 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_12_124_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_12_124_12_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_42_124_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 121 16 ]
+        symbol [ System %tmp.62 121 16 22 ];
+        %tmp.62 = getm $.Toybox.System;
+        symbol [ println %tmp.63 121 23 30 ];
+        %tmp.63 = getv function %tmp.62 :println;
+        %tmp.64 = "Heart rate returned to normal";
+        invoke %tmp.62 %tmp.63(%tmp.64);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 122 16 ]
+        %tmp.65 = null;
+        symbol [ _highHRStartTime ? 122 16 32 ];
+        putv self :_highHRStartTime %tmp.65;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 123 16 ]
+        %tmp.66 = false;
+        symbol [ _alertSent ? 123 16 26 ];
+        putv self :_alertSent %tmp.66;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_42_124_12_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_12_124_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_120_12_124_12_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_118_15_125_8_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_114_15_125_8_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_96_8_125_8_if_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_88_38_126_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 129; @position = 16; @symbol_vardef = [_simulatedHR,129,16,28]; @symbol_type<0> = [Number,129,32,38]; ]
+    private
+    var _simulatedHR as Number = 65;
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 130; @symbol_functiondef = [simulateHeartRateForTesting,130,13,40]; ]
+    function simulateHeartRateForTesting() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_130_51_143_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 132 8 ]
+        symbol [ _simulatedHR %tmp.2 132 23 35 ];
+        %tmp.2 = getv ? :_simulatedHR;
+        %tmp.3 = 5;
+        %tmp.4 = add %tmp.2 %tmp.3;
+        symbol [ _simulatedHR ? 132 8 20 ];
+        putv self :_simulatedHR %tmp.4;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 134 8 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_8_136_8_if_stmt:
+        symbol [ _simulatedHR %tmp.6 134 12 24 ];
+        %tmp.6 = getv ? :_simulatedHR;
+        %tmp.7 = 200;
+        %tmp.8 = gt %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_8_136_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_8_136_8_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_32_136_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 135 12 ]
+        %tmp.9 = 65;
+        symbol [ _simulatedHR ? 135 12 24 ];
+        putv self :_simulatedHR %tmp.9;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_32_136_8_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_8_136_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_134_8_136_8_if_end:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 138 8 ]
+        symbol [ _simulatedHR %tmp.11 138 28 40 ];
+        %tmp.11 = getv ? :_simulatedHR;
+        symbol [ _currentHeartRate ? 138 8 25 ];
+        putv self :_currentHeartRate %tmp.11;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 139 8 ]
+        symbol [ System %tmp.12 139 8 14 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ println %tmp.13 139 15 22 ];
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "SIMULATED Heart Rate: ";
+        symbol [ _currentHeartRate %tmp.16 139 50 67 ];
+        %tmp.16 = getv ? :_currentHeartRate;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        %tmp.18 = " BPM";
+        %tmp.19 = add %tmp.17 %tmp.18;
+        invoke %tmp.12 %tmp.13(%tmp.19);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 142 8 ]
+        %tmp.20 = self;
+        symbol [ checkForAlerts %tmp.21 142 8 22 ];
+        %tmp.21 = getv function %tmp.20 :checkForAlerts;
+        invoke %tmp.20 %tmp.21();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_130_51_143_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 146; @symbol_functiondef = [sendEmergencyAlert,146,13,31]; ]
+    function sendEmergencyAlert() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_146_42_182_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 147 8 ]
+        symbol [ System %tmp.1 147 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 147 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "🚨 SENDING EMERGENCY ALERT! 🚨";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 149 8 ]
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_beginTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_endTry @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_beginTry:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 151 12 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_stop" ]
+        %position.1 = local;
+        symbol [ position %position.1 151 16 24 ];
+        symbol [ Position %tmp.4 151 27 35 ];
+        %tmp.4 = getm $.Toybox.Position;
+        symbol [ getInfo %tmp.5 151 36 43 ];
+        %tmp.5 = getv function %tmp.4 :getInfo;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %position.1 %tmp.6;
+        symbol [ position %position.1 151 16 24 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 152 12 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_stop" ]
+        %location.2 = local;
+        symbol [ location %location.2 152 16 24 ];
+        %tmp.7 = "Unknown";
+        lputv %location.2 %tmp.7;
+        symbol [ location %location.2 152 16 24 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 154 12 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_12_158_12_if_stmt:
+        %tmp.8 = lgetv %position.1;
+        symbol [ position %tmp.8 154 16 24 ];
+        symbol [ position %tmp.9 154 25 33 ];
+        %tmp.9 = getv %tmp.8 :position;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_12_158_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_12_158_12_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 155 16 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_stop" ]
+        %lat.3 = local;
+        symbol [ lat %lat.3 155 20 23 ];
+        %tmp.12 = lgetv %position.1;
+        symbol [ position %tmp.12 155 26 34 ];
+        symbol [ position %tmp.13 155 35 43 ];
+        %tmp.13 = getv %tmp.12 :position;
+        symbol [ toDegrees %tmp.14 155 44 53 ];
+        %tmp.14 = getv function %tmp.13 :toDegrees;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = 0;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        lputv %lat.3 %tmp.17;
+        symbol [ lat %lat.3 155 20 23 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 156 16 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_stop" ]
+        %lon.4 = local;
+        symbol [ lon %lon.4 156 20 23 ];
+        %tmp.18 = lgetv %position.1;
+        symbol [ position %tmp.18 156 26 34 ];
+        symbol [ position %tmp.19 156 35 43 ];
+        %tmp.19 = getv %tmp.18 :position;
+        symbol [ toDegrees %tmp.20 156 44 53 ];
+        %tmp.20 = getv function %tmp.19 :toDegrees;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        %tmp.22 = 1;
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        lputv %lon.4 %tmp.23;
+        symbol [ lon %lon.4 156 20 23 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 157 16 ]
+        %tmp.24 = lgetv %lat.3;
+        symbol [ lat %tmp.24 157 27 30 ];
+        symbol [ format %tmp.25 157 31 37 ];
+        %tmp.25 = getv function %tmp.24 :format;
+        %tmp.26 = "%.6f";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = ",";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = lgetv %lon.4;
+        symbol [ lon %tmp.30 157 54 57 ];
+        symbol [ format %tmp.31 157 58 64 ];
+        %tmp.31 = getv function %tmp.30 :format;
+        %tmp.32 = "%.6f";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        %tmp.34 = add %tmp.29 %tmp.33;
+        lputv %location.2 %tmp.34;
+        symbol [ location %location.2 157 16 24 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_43_158_12_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_12_158_12_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_154_12_158_12_if_end:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 161 12 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_start" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_stop" ]
+        %alertData.5 = local;
+        symbol [ alertData %alertData.5 161 16 25 ];
+        %tmp.35 = newd 5;
+        %tmp.36 = "type";
+        %tmp.37 = "heart_rate_emergency";
+        %tmp.38 = dup %tmp.35;
+        %tmp.39 = aputv %tmp.38 %tmp.36 %tmp.37;
+        %tmp.40 = "heartRate";
+        symbol [ _currentHeartRate %tmp.42 163 31 48 ];
+        %tmp.42 = getv ? :_currentHeartRate;
+        %tmp.43 = dup %tmp.39;
+        %tmp.44 = aputv %tmp.43 %tmp.40 %tmp.42;
+        %tmp.45 = "location";
+        %tmp.46 = lgetv %location.2;
+        symbol [ location %tmp.46 164 30 38 ];
+        %tmp.47 = dup %tmp.44;
+        %tmp.48 = aputv %tmp.47 %tmp.45 %tmp.46;
+        %tmp.49 = "timestamp";
+        symbol [ System %tmp.50 165 31 37 ];
+        %tmp.50 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.51 165 38 50 ];
+        %tmp.51 = getv function %tmp.50 :getClockTime;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        symbol [ hour %tmp.53 165 53 57 ];
+        %tmp.53 = getv %tmp.52 :hour;
+        %tmp.54 = ":";
+        %tmp.55 = add %tmp.53 %tmp.54;
+        symbol [ System %tmp.56 165 66 72 ];
+        %tmp.56 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.57 165 73 85 ];
+        %tmp.57 = getv function %tmp.56 :getClockTime;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        symbol [ min %tmp.59 165 88 91 ];
+        %tmp.59 = getv %tmp.58 :min;
+        %tmp.60 = add %tmp.55 %tmp.59;
+        %tmp.61 = dup %tmp.48;
+        %tmp.62 = aputv %tmp.61 %tmp.49 %tmp.60;
+        %tmp.63 = "message";
+        %tmp.64 = "EMERGENCY: Dangerously high heart rate detected during exercise!";
+        %tmp.65 = dup %tmp.62;
+        %tmp.66 = aputv %tmp.65 %tmp.63 %tmp.64;
+        lputv %alertData.5 %tmp.66;
+        symbol [ alertData %alertData.5 161 16 25 ];
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 170 12 ]
+        symbol [ Communications %tmp.67 170 12 26 ];
+        %tmp.67 = getm $.Toybox.Communications;
+        symbol [ transmit %tmp.68 170 27 35 ];
+        %tmp.68 = getv function %tmp.67 :transmit;
+        %tmp.69 = lgetv %alertData.5;
+        symbol [ alertData %tmp.69 171 16 25 ];
+        %tmp.70 = null;
+        symbol [ AlertCommListener %tmp.74 173 20 37 ];
+        %tmp.74 = getv ? :AlertCommListener;
+        %tmp.71 = newc %tmp.74 ();
+        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.71);
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 176 12 ]
+        %tmp.75 = true;
+        symbol [ _alertSent ? 176 12 22 ];
+        putv self :_alertSent %tmp.75;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 177 12 ]
+        symbol [ System %tmp.76 177 12 18 ];
+        %tmp.76 = getm $.Toybox.System;
+        symbol [ println %tmp.77 177 19 26 ];
+        %tmp.77 = getv function %tmp.76 :println;
+        %tmp.78 = "🚨 EMERGENCY ALERT SENT TO PHONE! 🚨";
+        invoke %tmp.76 %tmp.77(%tmp.78);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_12_179_8_stop:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_endTry:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_catch:
+        %tmp.79 = exception;
+        push %tmp.79;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 179 10 ]
+        [ "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_catch" "_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_10_181_8_end" ]
+        %ex.6 = local;
+        symbol [ ex %ex.6 179 17 19 ];
+        %tmp.80 = dup %tmp.79;
+        lputv %ex.6 %tmp.80;
+        symbol [ ex %ex.6 179 17 19 ];
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_21_181_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 180 12 ]
+        symbol [ System %tmp.81 180 12 18 ];
+        %tmp.81 = getm $.Toybox.System;
+        symbol [ println %tmp.82 180 19 26 ];
+        %tmp.82 = getv function %tmp.81 :println;
+        %tmp.83 = "Error sending alert: ";
+        %tmp.84 = lgetv %ex.6;
+        symbol [ ex %tmp.84 180 53 55 ];
+        symbol [ getErrorMessage %tmp.85 180 56 71 ];
+        %tmp.85 = getv function %tmp.84 :getErrorMessage;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        %tmp.87 = add %tmp.83 %tmp.86;
+        invoke %tmp.81 %tmp.82(%tmp.87);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_21_181_8_stop:
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally;
+        pop;
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_10_181_8_end:
+        try @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_catch @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_10_181_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_179_10_181_8_end @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally;
+        jsr @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally;
+        throw %tmp.79;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_finally:
+        jsrret;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_149_8_181_8_end:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_146_42_182_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 185; @symbol_functiondef = [getCurrentHeartRate,185,13,32]; @symbol_return<0> = [Number,185,38,44]; ]
+    function getCurrentHeartRate() as Number or Null {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_185_46_187_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 186 8 ]
+        symbol [ _currentHeartRate %tmp.2 186 15 32 ];
+        %tmp.2 = getv ? :_currentHeartRate;
+        ret %tmp.2;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_185_46_187_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 190; @symbol_functiondef = [isMonitoring,190,13,25]; @symbol_return<0> = [Boolean,190,31,38]; ]
+    function isMonitoring() as Boolean {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_190_39_192_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 191 8 ]
+        symbol [ _isMonitoring %tmp.2 191 15 28 ];
+        %tmp.2 = getv ? :_isMonitoring;
+        ret %tmp.2;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_190_39_192_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 195; @symbol_functiondef = [isAlertSent,195,13,24]; @symbol_return<0> = [Boolean,195,30,37]; ]
+    function isAlertSent() as Boolean {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_195_38_197_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 196 8 ]
+        symbol [ _alertSent %tmp.2 196 15 25 ];
+        %tmp.2 = getv ? :_alertSent;
+        ret %tmp.2;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_195_38_197_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 200; @symbol_functiondef = [resetAlert,200,13,23]; ]
+    function resetAlert() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_200_34_205_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 201 8 ]
+        %tmp.1 = false;
+        symbol [ _alertSent ? 201 8 18 ];
+        putv self :_alertSent %tmp.1;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 202 8 ]
+        %tmp.2 = null;
+        symbol [ _highHRStartTime ? 202 8 24 ];
+        putv self :_highHRStartTime %tmp.2;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 203 8 ]
+        %tmp.3 = 65;
+        symbol [ _simulatedHR ? 203 8 20 ];
+        putv self :_simulatedHR %tmp.3;
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 204 8 ]
+        symbol [ System %tmp.4 204 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 204 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "Alert status reset";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_200_34_205_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 208; @symbol_functiondef = [onStop,208,13,19]; ]
+    function onStop() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_208_30_213_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 209 8 ]
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_8_211_8_if_stmt:
+        symbol [ _monitoringTimer %tmp.2 209 12 28 ];
+        %tmp.2 = getv ? :_monitoringTimer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_8_211_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_8_211_8_if_true:
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_38_211_8_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 210 12 ]
+        symbol [ _monitoringTimer %tmp.6 210 12 28 ];
+        %tmp.6 = getv ? :_monitoringTimer;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ stop %tmp.8 210 29 33 ];
+        %tmp.8 = getv function %tmp.7 :stop;
+        invoke %tmp.7 %tmp.8();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_38_211_8_stop:
+        goto @_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_8_211_8_if_end;
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_209_8_211_8_if_end:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 212 8 ]
+        symbol [ System %tmp.9 212 8 14 ];
+        %tmp.9 = getm $.Toybox.System;
+        symbol [ println %tmp.10 212 15 22 ];
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Heart rate monitoring stopped";
+        invoke %tmp.9 %tmp.10(%tmp.11);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_208_30_213_4_stop:
+    }
+}
+[ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 217; @symbol_classdef = [AlertCommListener,217,6,23]; @symbol_extends<0> = [Communications,217,32,46]; @symbol_extends<1> = [ConnectionListener,217,47,65]; ]
+class AlertCommListener extends Communications.ConnectionListener {
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 217; ]
+    <init> {
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 217; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 219; @symbol_functiondef = [initialize,219,13,23]; ]
+    function initialize() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_219_26_221_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 220 8 ]
+        symbol [ Communications %tmp.1 220 8 22 ];
+        %tmp.1 = getm $.Toybox.Communications;
+        symbol [ ConnectionListener %tmp.2 220 23 41 ];
+        %tmp.2 = getv %tmp.1 :ConnectionListener;
+        symbol [ initialize %tmp.3 220 42 52 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_219_26_221_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 223; @symbol_functiondef = [onComplete,223,13,23]; ]
+    function onComplete() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_223_34_225_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 224 8 ]
+        symbol [ System %tmp.1 224 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 224 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "✅ Alert sent successfully to phone!";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_223_34_225_4_stop:
+    }
+    [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 227; @symbol_functiondef = [onError,227,13,20]; ]
+    function onError() as Void {
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_227_31_229_4_start:
+[ "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" 228 8 ]
+        symbol [ System %tmp.1 228 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 228 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "❌ Failed to send alert - no phone connection";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+_Users_arturs_Desktop_code_HeartRate_HeartRate_source_HeartRateDelegate_mc_227_31_229_4_stop:
     }
 }
 [ @file = "/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc"; @line = 1; ]

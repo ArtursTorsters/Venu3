@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="2" lineNum="5" parent="globals/HeartRateMenuDelegate" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="3" lineNum="9" parent="globals/HeartRateDelegate" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="4" lineNum="5" parent="globals/HeartRateApp" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="5" lineNum="7" parent="globals/Rez" pc="268435517" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="6" lineNum="211" parent="globals/AlertCommListener" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="7" lineNum="6" parent="globals/HeartRateView" pc="268435549" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="8" lineNum="11" parent="globals/HeartRateMenuDelegate" pc="268435561" symbol="onMenuItem"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="8" lineNum="12" parent="globals/HeartRateMenuDelegate" pc="268435563" symbol="onMenuItem"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="8" lineNum="13" parent="globals/HeartRateMenuDelegate" pc="268435574" symbol="onMenuItem"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="8" lineNum="14" parent="globals/HeartRateMenuDelegate" pc="268435595" symbol="onMenuItem"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="8" lineNum="15" parent="globals/HeartRateMenuDelegate" pc="268435606" symbol="onMenuItem"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="9" lineNum="7" parent="globals/HeartRateMenuDelegate" pc="268435628" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateMenuDelegate.mc" id="9" lineNum="8" parent="globals/HeartRateMenuDelegate" pc="268435630" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="10" lineNum="31" parent="globals/HeartRateDelegate" pc="268435643" symbol="onMenu"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="10" lineNum="32" parent="globals/HeartRateDelegate" pc="268435645" symbol="onMenu"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="10" lineNum="33" parent="globals/HeartRateDelegate" pc="268435710" symbol="onMenu"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="58" parent="globals/HeartRateDelegate" pc="268435712" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="61" parent="globals/HeartRateDelegate" pc="268435715" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="63" parent="globals/HeartRateDelegate" pc="268435727" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="64" parent="globals/HeartRateDelegate" pc="268435749" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="65" parent="globals/HeartRateDelegate" pc="268435763" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="68" parent="globals/HeartRateDelegate" pc="268435793" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="71" parent="globals/HeartRateDelegate" pc="268435803" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="73" parent="globals/HeartRateDelegate" pc="268435821" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="76" parent="globals/HeartRateDelegate" pc="268435834" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="11" lineNum="77" parent="globals/HeartRateDelegate" pc="268435838" symbol="checkHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="124" parent="globals/HeartRateDelegate" pc="268435877" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="126" parent="globals/HeartRateDelegate" pc="268435879" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="128" parent="globals/HeartRateDelegate" pc="268435894" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="129" parent="globals/HeartRateDelegate" pc="268435906" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="132" parent="globals/HeartRateDelegate" pc="268435918" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="133" parent="globals/HeartRateDelegate" pc="268435930" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="12" lineNum="136" parent="globals/HeartRateDelegate" pc="268435960" symbol="simulateHeartRateForTesting"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="13" lineNum="194" parent="globals/HeartRateDelegate" pc="268435968" symbol="resetAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="13" lineNum="195" parent="globals/HeartRateDelegate" pc="268435970" symbol="resetAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="13" lineNum="196" parent="globals/HeartRateDelegate" pc="268435978" symbol="resetAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="13" lineNum="197" parent="globals/HeartRateDelegate" pc="268435986" symbol="resetAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="13" lineNum="198" parent="globals/HeartRateDelegate" pc="268435995" symbol="resetAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="37" parent="globals/HeartRateDelegate" pc="268436014" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="38" parent="globals/HeartRateDelegate" pc="268436017" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="42" parent="globals/HeartRateDelegate" pc="268436035" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="43" parent="globals/HeartRateDelegate" pc="268436053" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="46" parent="globals/HeartRateDelegate" pc="268436071" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="47" parent="globals/HeartRateDelegate" pc="268436100" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="49" parent="globals/HeartRateDelegate" pc="268436131" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="50" parent="globals/HeartRateDelegate" pc="268436139" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="52" parent="globals/HeartRateDelegate" pc="268436163" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="14" lineNum="53" parent="globals/HeartRateDelegate" pc="268436167" symbol="initializeHeartRateMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="15" lineNum="179" parent="globals/HeartRateDelegate" pc="268436206" symbol="getCurrentHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="15" lineNum="180" parent="globals/HeartRateDelegate" pc="268436208" symbol="getCurrentHeartRate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="140" parent="globals/HeartRateDelegate" pc="268436214" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="141" parent="globals/HeartRateDelegate" pc="268436217" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="145" parent="globals/HeartRateDelegate" pc="268436235" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="146" parent="globals/HeartRateDelegate" pc="268436247" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="148" parent="globals/HeartRateDelegate" pc="268436254" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="149" parent="globals/HeartRateDelegate" pc="268436264" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="150" parent="globals/HeartRateDelegate" pc="268436280" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="151" parent="globals/HeartRateDelegate" pc="268436297" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="155" parent="globals/HeartRateDelegate" pc="268436337" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="164" parent="globals/HeartRateDelegate" pc="268436408" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="170" parent="globals/HeartRateDelegate" pc="268436442" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="171" parent="globals/HeartRateDelegate" pc="268436450" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="173" parent="globals/HeartRateDelegate" pc="268436474" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="16" lineNum="174" parent="globals/HeartRateDelegate" pc="268436478" symbol="sendEmergencyAlert"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="17" lineNum="189" parent="globals/HeartRateDelegate" pc="268436517" symbol="isAlertSent"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="17" lineNum="190" parent="globals/HeartRateDelegate" pc="268436519" symbol="isAlertSent"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="18" lineNum="25" parent="globals/HeartRateDelegate" pc="268436525" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="18" lineNum="26" parent="globals/HeartRateDelegate" pc="268436527" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="18" lineNum="27" parent="globals/HeartRateDelegate" pc="268436539" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="18" lineNum="28" parent="globals/HeartRateDelegate" pc="268436557" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="82" parent="globals/HeartRateDelegate" pc="268436565" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="83" parent="globals/HeartRateDelegate" pc="268436568" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="84" parent="globals/HeartRateDelegate" pc="268436577" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="87" parent="globals/HeartRateDelegate" pc="268436581" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="90" parent="globals/HeartRateDelegate" pc="268436593" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="92" parent="globals/HeartRateDelegate" pc="268436605" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="94" parent="globals/HeartRateDelegate" pc="268436614" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="95" parent="globals/HeartRateDelegate" pc="268436623" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="98" parent="globals/HeartRateDelegate" pc="268436644" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="100" parent="globals/HeartRateDelegate" pc="268436658" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="103" parent="globals/HeartRateDelegate" pc="268436685" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="104" parent="globals/HeartRateDelegate" pc="268436702" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="108" parent="globals/HeartRateDelegate" pc="268436715" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="110" parent="globals/HeartRateDelegate" pc="268436727" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="114" parent="globals/HeartRateDelegate" pc="268436760" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="115" parent="globals/HeartRateDelegate" pc="268436769" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="116" parent="globals/HeartRateDelegate" pc="268436787" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="19" lineNum="117" parent="globals/HeartRateDelegate" pc="268436795" symbol="checkForAlerts"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="20" lineNum="184" parent="globals/HeartRateDelegate" pc="268436807" symbol="isMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="20" lineNum="185" parent="globals/HeartRateDelegate" pc="268436809" symbol="isMonitoring"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="21" lineNum="202" parent="globals/HeartRateDelegate" pc="268436815" symbol="onStop"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="21" lineNum="203" parent="globals/HeartRateDelegate" pc="268436817" symbol="onStop"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="21" lineNum="204" parent="globals/HeartRateDelegate" pc="268436826" symbol="onStop"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="21" lineNum="206" parent="globals/HeartRateDelegate" pc="268436841" symbol="onStop"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="22" lineNum="12" parent="globals/HeartRateApp" pc="268436860" symbol="onStart"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="23" lineNum="20" parent="globals/HeartRateApp" pc="268436863" symbol="getInitialView"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="23" lineNum="21" parent="globals/HeartRateApp" pc="268436865" symbol="getInitialView"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="24" lineNum="7" parent="globals/HeartRateApp" pc="268436912" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="24" lineNum="8" parent="globals/HeartRateApp" pc="268436914" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateApp.mc" id="25" lineNum="16" parent="globals/HeartRateApp" pc="268436927" symbol="onStop"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="26" lineNum="221" parent="globals/AlertCommListener" pc="268436930" symbol="onError"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="26" lineNum="222" parent="globals/AlertCommListener" pc="268436932" symbol="onError"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="27" lineNum="217" parent="globals/AlertCommListener" pc="268436951" symbol="onComplete"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="27" lineNum="218" parent="globals/AlertCommListener" pc="268436953" symbol="onComplete"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="28" lineNum="213" parent="globals/AlertCommListener" pc="268436972" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateDelegate.mc" id="28" lineNum="214" parent="globals/AlertCommListener" pc="268436974" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="29" lineNum="13" parent="globals/HeartRateView" pc="268436991" symbol="onShow"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="29" lineNum="14" parent="globals/HeartRateView" pc="268436993" symbol="onShow"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="30" lineNum="8" parent="globals/HeartRateView" pc="268437012" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="30" lineNum="9" parent="globals/HeartRateView" pc="268437014" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="31" lineNum="63" parent="globals/HeartRateView" pc="268437027" symbol="onHide"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="31" lineNum="64" parent="globals/HeartRateView" pc="268437029" symbol="onHide"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="18" parent="globals/HeartRateView" pc="268437048" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="20" parent="globals/HeartRateView" pc="268437051" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="21" parent="globals/HeartRateView" pc="268437063" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="24" parent="globals/HeartRateView" pc="268437071" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="27" parent="globals/HeartRateView" pc="268437088" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="28" parent="globals/HeartRateView" pc="268437097" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="31" parent="globals/HeartRateView" pc="268437106" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="39" parent="globals/HeartRateView" pc="268437135" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="48" parent="globals/HeartRateView" pc="268437164" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="49" parent="globals/HeartRateView" pc="268437176" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="51" parent="globals/HeartRateView" pc="268437223" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/source/HeartRateView.mc" id="32" lineNum="59" parent="globals/HeartRateView" pc="268437252" symbol="onUpdate"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="33" lineNum="14" parent="globals/Rez/Layouts" pc="268437274" symbol="MainLayout"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="33" lineNum="15" parent="globals/Rez/Layouts" pc="268437285" symbol="MainLayout"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="33" lineNum="17" parent="globals/Rez/Layouts" pc="268437385" symbol="MainLayout"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="33" lineNum="18" parent="globals/Rez/Layouts" pc="268437469" symbol="MainLayout"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="33" lineNum="20" parent="globals/Rez/Layouts" pc="268437501" symbol="MainLayout"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="34" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268437516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="35" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268437528" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="35" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268437530" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="35" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268437542" symbol="initialize"/>
+        <entry filename="/Users/arturs/Desktop/code/HeartRate/HeartRate/bin/gen/006-B3703-00/source/Rez.mcgen" id="35" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268437587" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry id="24" method="true" symbol="resetAlert"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="26" method="true" symbol="simulateHeartRateForTesting"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="31" method="true" symbol="MainLayout"/>
+        <entry id="7" object="true" symbol="AlertCommListener"/>
+        <entry id="19" method="true" symbol="checkHeartRate"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="33" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="36" symbol="prompt"/>
+        <entry field="true" id="30" symbol="id_monkey"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="18" method="true" symbol="checkForAlerts"/>
+        <entry id="38" symbol="item_2"/>
+        <entry id="37" symbol="item_1"/>
+        <entry id="28" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="11" object="true" symbol="HeartRateView"/>
+        <entry id="8388828" method="true" symbol="onError"/>
+        <entry id="32" object="true" symbol="MainMenu"/>
+        <entry id="22" method="true" symbol="isAlertSent"/>
+        <entry field="true" id="13" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_currentHeartRate&gt;"/>
+        <entry id="23" method="true" symbol="isMonitoring"/>
+        <entry field="true" id="15" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_isMonitoring&gt;"/>
+        <entry field="true" id="14" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_highHRStartTime&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8" object="true" symbol="HeartRateApp"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="29" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="25" method="true" symbol="sendEmergencyAlert"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="21" method="true" symbol="initializeHeartRateMonitoring"/>
+        <entry id="20" method="true" symbol="getCurrentHeartRate"/>
+        <entry field="true" id="17" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_simulatedHR&gt;"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="12" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_alertSent&gt;"/>
+        <entry id="8388829" method="true" symbol="onComplete"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="27" module="true" symbol="Layouts"/>
+        <entry id="10" object="true" symbol="HeartRateMenuDelegate"/>
+        <entry id="8388642" module="true" symbol="Position"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="9" object="true" symbol="HeartRateDelegate"/>
+        <entry field="true" id="16" symbol="&lt;globals/HeartRateDelegate/&lt;&gt;_monitoringTimer&gt;"/>
+        <entry field="true" id="35" symbol="menu_label_2"/>
+        <entry field="true" id="34" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435627" name="item" stackId="1" startPc="268435561"/>
+        <entry endPc="268435827" name="info" stackId="1" startPc="268435715"/>
+        <entry endPc="268435870" name="ex" stackId="2" startPc="268435834"/>
+        <entry endPc="268436199" name="ex" stackId="1" startPc="268436163"/>
+        <entry endPc="268436467" name="position" stackId="1" startPc="268436235"/>
+        <entry endPc="268436467" name="location" stackId="2" startPc="268436235"/>
+        <entry endPc="268436333" name="lat" stackId="3" startPc="268436264"/>
+        <entry endPc="268436333" name="lon" stackId="4" startPc="268436264"/>
+        <entry endPc="268436467" name="alertData" stackId="5" startPc="268436235"/>
+        <entry endPc="268436510" name="ex" stackId="6" startPc="268436474"/>
+        <entry endPc="268436805" name="currentTime" stackId="1" startPc="268436568"/>
+        <entry endPc="268436711" name="highDuration" stackId="2" startPc="268436644"/>
+        <entry arg="true" endPc="268437273" name="dc" stackId="1" startPc="268437048"/>
+        <entry endPc="268437272" name="width" stackId="2" startPc="268437051"/>
+        <entry endPc="268437272" name="height" stackId="3" startPc="268437051"/>
+        <entry endPc="268437272" name="clockTime" stackId="4" startPc="268437051"/>
+        <entry endPc="268437272" name="timeString" stackId="5" startPc="268437051"/>
+        <entry arg="true" endPc="268437515" name="dc" stackId="1" startPc="268437274"/>
+        <entry endPc="268437515" name="rez_cmp_local_text_1193959466" stackId="2" startPc="268437285"/>
+        <entry endPc="268437515" name="rez_cmp_local_bitmap_id_monkey" stackId="3" startPc="268437285"/>
+    </localVars>
+    <deviceInfo deviceVersion="c3c85f7bae6fb4aafa9acce2937cf0e1d7b137f1" partNumber="006-B3703-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_monkey"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/HeartRateMenuDelegate" offset="161" parentId="globals" symbolId="HeartRateMenuDelegate" type="class"/>
+        <dataEntry label="globals/HeartRateDelegate" offset="214" parentId="globals" symbolId="HeartRateDelegate" type="class"/>
+        <dataEntry label="globals/HeartRateApp" offset="411" parentId="globals" symbolId="HeartRateApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="482" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/AlertCommListener" offset="544" parentId="globals" symbolId="AlertCommListener" type="class"/>
+        <dataEntry label="globals/HeartRateView" offset="606" parentId="globals" symbolId="HeartRateView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="677" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="721" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="756" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="791" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="853" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="&lt;init&gt;" parent="HeartRateMenuDelegate" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="HeartRateDelegate" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435516" name="&lt;init&gt;" parent="HeartRateApp" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="Rez" startPc="268435517">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="AlertCommListener" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435560" name="&lt;init&gt;" parent="HeartRateView" startPc="268435549">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435627" name="onMenuItem" parent="HeartRateMenuDelegate" startPc="268435561">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435642" name="initialize" parent="HeartRateMenuDelegate" startPc="268435628">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435711" name="onMenu" parent="HeartRateDelegate" startPc="268435643">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435876" name="checkHeartRate" parent="HeartRateDelegate" startPc="268435712">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435967" name="simulateHeartRateForTesting" parent="HeartRateDelegate" startPc="268435877">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436013" name="resetAlert" parent="HeartRateDelegate" startPc="268435968">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436205" name="initializeHeartRateMonitoring" parent="HeartRateDelegate" startPc="268436014">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436213" name="getCurrentHeartRate" parent="HeartRateDelegate" startPc="268436206">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436516" name="sendEmergencyAlert" parent="HeartRateDelegate" startPc="268436214">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436524" name="isAlertSent" parent="HeartRateDelegate" startPc="268436517">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436564" name="initialize" parent="HeartRateDelegate" startPc="268436525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436806" name="checkForAlerts" parent="HeartRateDelegate" startPc="268436565">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436814" name="isMonitoring" parent="HeartRateDelegate" startPc="268436807">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436859" name="onStop" parent="HeartRateDelegate" startPc="268436815">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436862" name="onStart" parent="HeartRateApp" startPc="268436860">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436911" name="getInitialView" parent="HeartRateApp" startPc="268436863">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436926" name="initialize" parent="HeartRateApp" startPc="268436912">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436929" name="onStop" parent="HeartRateApp" startPc="268436927">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436950" name="onError" parent="AlertCommListener" startPc="268436930">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436971" name="onComplete" parent="AlertCommListener" startPc="268436951">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436990" name="initialize" parent="AlertCommListener" startPc="268436972">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437011" name="onShow" parent="HeartRateView" startPc="268436991">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437026" name="initialize" parent="HeartRateView" startPc="268437012">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437047" name="onHide" parent="HeartRateView" startPc="268437027">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437273" name="onUpdate" parent="HeartRateView" startPc="268437048">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437515" name="MainLayout" parent="Layouts" startPc="268437274">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437527" name="&lt;init&gt;" parent="MainMenu" startPc="268437516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437632" name="initialize" parent="MainMenu" startPc="268437528">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

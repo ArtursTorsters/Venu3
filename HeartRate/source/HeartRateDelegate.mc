@@ -6,6 +6,12 @@ import Toybox.System;
 import Toybox.Communications;
 import Toybox.Position;
 
+
+// When app starts:
+// 1. Enable heart rate sensor
+// 2. Start a timer that runs every 3 seconds
+// 3. Set monitoring flag to true
+
 class HeartRateDelegate extends WatchUi.BehaviorDelegate {
 
     // Heart rate monitoring variables
@@ -22,12 +28,12 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
     // Monitoring settings
     private var _isMonitoring as Boolean = false;
 
-
-//main initialize
     function initialize() {
         BehaviorDelegate.initialize();
-            initializeHeartRateMonitoring();
+        System.println("Initializing heart rate app...");
+        initializeHeartRateMonitoring();
     }
+
     function onMenu() as Boolean {
         WatchUi.pushView(new Rez.Menus.MainMenu(), new HeartRateMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
@@ -35,17 +41,12 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
 
     // Initialize heart rate sensor and monitoring
     function initializeHeartRateMonitoring() as Void {
-        System.println("Initializing heart rate monitoring...");
+        System.println("Starting heart rate monitoring...");
 
         try {
             // Enable heart rate sensor
             Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
-
-            // Register for sensor data
-            Sensor.registerSensorDataListener(method(:onSensorData), {
-                :period => 1,        // Check every 1 second
-                :sampleRate => 1     // 1 sample per check
-            });
+            System.println("Heart rate sensor enabled");
 
             // Start monitoring timer for periodic checks
             _monitoringTimer = new Timer.Timer();
@@ -59,24 +60,37 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
         }
     }
 
-    // Called when sensor data is available
-    function onSensorData(sensorData as Sensor.Info) as Void {
-        if (sensorData.heartRate != null) {
-            _currentHeartRate = sensorData.heartRate;
-            System.println("Heart Rate: " + _currentHeartRate);
+    // Check heart rate using Sensor.getInfo() (reliable method)
+    function checkHeartRate() as Void {
+        try {
+            // Get current sensor info
+            var info = Sensor.getInfo();
+
+            if (info has :heartRate && info.heartRate != null) {
+                _currentHeartRate = info.heartRate;
+                System.println("Heart Rate: " + _currentHeartRate + " BPM");
+
+                // Check for alerts
+                checkForAlerts();
+
+            } else {
+                System.println("No heart rate data available");
+                // In simulator, let's use fake data for testing
+                simulateHeartRateForTesting();
+            }
+
+        } catch (ex) {
+            System.println("Error reading heart rate: " + ex.getErrorMessage());
         }
     }
 
-    // Periodic heart rate check and alert logic
-    function checkHeartRate() as Void {
+    // Alert logic
+    function checkForAlerts() as Void {
         if (_currentHeartRate == null) {
-            System.println("No heart rate data available");
             return;
         }
 
         var currentTime = System.getTimer();
-
-        System.println("Checking HR: " + _currentHeartRate + " BPM");
 
         // Check if heart rate is above alert threshold
         if (_currentHeartRate >= ALERT_THRESHOLD) {
@@ -84,7 +98,7 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
             if (_highHRStartTime == null) {
                 // First time detecting high HR
                 _highHRStartTime = currentTime;
-                System.println("High heart rate detected! Starting timer...");
+                System.println("HIGH HEART RATE DETECTED! Starting timer...");
             } else {
                 // Calculate how long HR has been high
                 var highDuration = (currentTime - _highHRStartTime) / 1000; // Convert to seconds
@@ -99,7 +113,7 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
 
         } else if (_currentHeartRate >= WARNING_THRESHOLD) {
             // Warning level - just log for now
-            System.println("Warning: Heart rate elevated (" + _currentHeartRate + " BPM)");
+            System.println("WARNING: Heart rate elevated (" + _currentHeartRate + " BPM)");
 
         } else {
             // Heart rate is normal - reset everything
@@ -111,9 +125,26 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
         }
     }
 
+    // For testing in simulator - simulate escalating heart rate
+    private var _simulatedHR as Number = 65;
+    function simulateHeartRateForTesting() as Void {
+        // Gradually increase heart rate for testing
+        _simulatedHR = _simulatedHR + 5;
+
+        if (_simulatedHR > 200) {
+            _simulatedHR = 65; // Reset cycle
+        }
+
+        _currentHeartRate = _simulatedHR;
+        System.println("SIMULATED Heart Rate: " + _currentHeartRate + " BPM");
+
+        // Check for alerts with simulated data
+        checkForAlerts();
+    }
+
     // Send emergency alert to phone
     function sendEmergencyAlert() as Void {
-        System.println("SENDING EMERGENCY ALERT!");
+        System.println("🚨 SENDING EMERGENCY ALERT! 🚨");
 
         try {
             // Get current location
@@ -128,11 +159,11 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
 
             // Create alert message
             var alertData = {
-                "type" => "heart_rate_alert",
+                "type" => "heart_rate_emergency",
                 "heartRate" => _currentHeartRate,
                 "location" => location,
                 "timestamp" => System.getClockTime().hour + ":" + System.getClockTime().min,
-                "message" => "Emergency: High heart rate detected during exercise!"
+                "message" => "EMERGENCY: Dangerously high heart rate detected during exercise!"
             };
 
             // Send to phone via Bluetooth
@@ -143,7 +174,7 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
             );
 
             _alertSent = true;
-            System.println("Emergency alert sent to phone!");
+            System.println("🚨 EMERGENCY ALERT SENT TO PHONE! 🚨");
 
         } catch (ex) {
             System.println("Error sending alert: " + ex.getErrorMessage());
@@ -169,6 +200,7 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
     function resetAlert() as Void {
         _alertSent = false;
         _highHRStartTime = null;
+        _simulatedHR = 65; // Reset simulation
         System.println("Alert status reset");
     }
 
@@ -177,7 +209,6 @@ class HeartRateDelegate extends WatchUi.BehaviorDelegate {
         if (_monitoringTimer != null) {
             _monitoringTimer.stop();
         }
-        Sensor.unregisterSensorDataListener();
         System.println("Heart rate monitoring stopped");
     }
 }
@@ -190,10 +221,10 @@ class AlertCommListener extends Communications.ConnectionListener {
     }
 
     function onComplete() as Void {
-        System.println("Alert sent successfully!");
+        System.println("✅ Alert sent successfully to phone!");
     }
 
     function onError() as Void {
-        System.println("Failed to send alert - no phone connection");
+        System.println("❌ Failed to send alert - no phone connection");
     }
 }
